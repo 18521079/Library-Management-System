@@ -115,19 +115,22 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 						<td className="">{item.author ? (item.author || '-') : '-'}</td>
 						
 						
-						<td className="">{item.edition ? (item.edition || '-') : '-'}</td>
 						<td className="">{item.publisher ? (item.publisher || '-') : '-'}</td>
 						
 						<td className="">{item.studentname ? (item.studentname || '-') : '-'}</td>
 						<td className="">{item.roll ? (item.roll || '-') : '-'}</td>
 						<td className="" style={{whiteSpace: 'pre-wrap'}}>{item.issue ? ((new Date(Date.parse(item.issue))).toDateString()+'\n'+(new Date(Date.parse(item.issue))).toLocaleTimeString() || '-') : '-'}</td>
 						<td className="">
-						<Link to={"/book/"+item.bookid} draggable="false"  className="">View Book</Link>
-						<br/>
-						<Link to={"/student/"+item.studentid} draggable="false"  className="">View Student</Link>
+						<div className="row">
+								<Link to={"/book/"+item.bookid} draggable="false"  className="">&nbsp; &nbsp;&nbsp; &nbsp;<i style={{fontSize:"1.6em", color:'#1cc88a'}} class="fas fa-book"></i></Link>
+								<br/>
+								<Link to={"/student/"+item.studentid} draggable="false"  className="">&nbsp; &nbsp; &nbsp;<i style={{fontSize:"1.6em", color:'#f6c23e'}} class="fas fa-user-graduate"></i></Link>
+							</div>
 						</td>
 						<td>
-						<a onClick={()=>{this.setState({bookid:item.bookid,studentid:item.studentid,studentname:item.studentname,roll:item.roll,bookname:item.bookname,author:item.author,publisher:item.publisher,edition:item.edition,isbn:item.isbn,fine:(Math.floor((Date.parse(new Date())-Date.parse(item.issue))/(60*60*24*1000))-15)},List.showModal())}}>Return</a>
+						<a onClick={()=>{this.setState({bookid:item.bookid,studentid:item.studentid,studentname:item.studentname,roll:item.roll,bookname:item.bookname,author:item.author,publisher:item.publisher,edition:item.edition,isbn:item.isbn,fine:(Math.floor((Date.parse(new Date())-Date.parse(item.issue))/(60*60*24*1000))-15)},List.showModal())}}><button className="btn  btn_normal mr5 mb3 mt3" >
+						<i class="fas fa-undo-alt"></i> Return
+                                </button></a>
 						</td>
 					</tr>
 				)
@@ -166,18 +169,18 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 						<div className="thisTable">
 							<div className="tbl-header">
 								<table>
-									<thead>
+								<thead className="thead-dark">
 									<tr>
-										<th className="">Name</th>
-										<th className="">ISBN</th>
-										<th className="">Author</th>
-										<th className="">Edition</th>
-										<th className="">Publisher</th>
-										<th className="">Student Name</th>
-										<th className="">Roll</th>
-										<th className="">Issued</th>
-										<th className=" ">Info</th>
-										<th className=" ">Action</th>
+										<th style ={{color:'white'}}className="mt1">  Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+										<th style ={{color:'white'}} className="">ID Books</th>
+										<th style ={{color:'white'}} className="">Author</th>
+									
+										<th style ={{color:'white'}} className="">Publisher</th>
+										<th style ={{color:'white'}} className="">Student</th>
+										<th style ={{color:'white'}} className="">ID student</th>
+										<th style ={{color:'white'}} className="">Issued</th>
+										<th style ={{color:'white'}} className=" ">Info</th>
+										<th style ={{color:'white'}} className=" ">Action</th>
 									</tr>
 									</thead>
 								</table>
@@ -214,22 +217,19 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 															<label>Publisher</label>
 															<input  name="search" placeholder="Name" value={this.state.publisher}/>
 														</div>
-														<div style={{width:wid}}>
-															<label>Edition</label>
-															<input  name="search" placeholder="Name" value={this.state.edition}/>
-														</div>
+														
 														<div style={{width:wid}}>
 															<label>Student Name</label>
 															<input  name="Year" placeholder="Year" value={this.state.studentname}/>
 														</div>
 														<div style={{width:wid}}>
-															<label>Roll</label>
+															<label> ID Student</label>
 															<input name="Roll" placeholder="Roll" value={this.state.roll}/>
 														</div>
 
 														<div style={{width:wid}}>
 															<label className={this.state.fine>0?"redtxt":""}>Fine Amount</label>
-															<input name="Fine" placeholder="Fine" className="bold" value={this.state.fine>0?'INR '+this.state.fine+'.00':'Nill'}/>
+															<input name="Fine" placeholder="Fine" className="bold" value={this.state.fine>0?'INR '+this.state.fine+'.00':'0'}/>
 														</div>
 														
 														

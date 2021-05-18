@@ -116,19 +116,22 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 						<td className="">{item.author ? (item.author || '-') : '-'}</td>
 						
 						
-						<td className="">{item.edition ? (item.edition || '-') : '-'}</td>
 						<td className="">{item.publisher ? (item.publisher || '-') : '-'}</td>
 						
 						<td className="">{item.studentname ? (item.studentname || '-') : '-'}</td>
 						<td className="">{item.roll ? (item.roll || '-') : '-'}</td>
 						<td className="" style={{whiteSpace: 'pre-wrap'}}>{item.issue ? ((new Date(Date.parse(item.issue))).toDateString()+'\n'+(new Date(Date.parse(item.issue))).toLocaleTimeString() || '-') : '-'}</td>
 						<td className="">
-						<Link to={"/book/"+item.bookid} draggable="false"  className="">View Book</Link>
-						<br/>
-						<Link to={"/student/"+item.studentid} draggable="false"  className="">View Student</Link>
+							<div className="row">
+								<Link to={"/book/"+item.bookid} draggable="false"  className="">&nbsp; &nbsp;&nbsp; &nbsp;<i style={{fontSize:"1.6em", color:'#1cc88a'}} class="fas fa-book"></i></Link>
+								<br/>
+								<Link to={"/student/"+item.studentid} draggable="false"  className="">&nbsp; &nbsp; &nbsp;<i style={{fontSize:"1.6em", color:'#f6c23e'}} class="fas fa-user-graduate"></i></Link>
+							</div>
 						</td>
 						<td>
-						<a onClick={()=>{this.setState({bookid:item.bookid,studentid:item.studentid,studentname:item.studentname,roll:item.roll,bookname:item.bookname,author:item.author,publisher:item.publisher,edition:item.edition,isbn:item.isbn,fine:(Math.floor((Date.parse(new Date())-Date.parse(item.issue))/(60*60*24*1000))-15)},List.showModal())}}>Return</a>
+						<a style={{fontSize:"1.4em", color:'#36b9cc'}}  onClick={()=>{this.setState({bookid:item.bookid,studentid:item.studentid,studentname:item.studentname,roll:item.roll,bookname:item.bookname,author:item.author,publisher:item.publisher,edition:item.edition,isbn:item.isbn,fine:(Math.floor((Date.parse(new Date())-Date.parse(item.issue))/(60*60*24*1000))-15)},List.showModal())}}><button className="btn  btn_normal mr5 mb3 mt3" >
+						<i class="fas fa-undo-alt"></i> Return
+                                </button></a>
 						</td>
 					</tr>
 				)
@@ -166,16 +169,15 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 					<div className="blockBody">
 						<div className="thisTable">
 							<div className="tbl-header">
-								<table>
-									<thead>
+								<table className="table">
+								<thead style={{color:'white !important'}}className="thead-dark">
 									<tr>
 										<th className="">Name</th>
-										<th className="">ISBN</th>
+										<th className="">ID Book</th>
 										<th className="">Author</th>
-										<th className="">Edition</th>
 										<th className="">Publisher</th>
-										<th className="">Student Name</th>
-										<th className="">Roll</th>
+										<th className="">Student</th>
+										<th className="">ID Student </th>
 										<th className="">Issued</th>
 										<th className=" ">Info</th>
 										<th className=" ">Action</th>
@@ -215,10 +217,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 															<label>Publisher</label>
 															<input  name="search" placeholder="Name" value={this.state.publisher}/>
 														</div>
-														<div style={{width:wid}}>
-															<label>Edition</label>
-															<input  name="search" placeholder="Name" value={this.state.edition}/>
-														</div>
+												
 														<div style={{width:wid}}>
 															<label>Student Name</label>
 															<input  name="Year" placeholder="Year" value={this.state.studentname}/>

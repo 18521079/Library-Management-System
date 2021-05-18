@@ -101,7 +101,14 @@ render(){
 		return(
 		<div className="thisBlock halfBlock">
 
-			<div className="blockTitle" style={{fontSize:'1.3vw'}}>Currently Issued</div>
+			<div className="row ml1">
+                        <div className="col-lg-3 ml130 mt70">
+                          <div className="d-flex position-relative float-left">
+                            <h1 className="section-title-2">Currently Issued</h1>
+                          </div>
+                        </div>
+            </div>
+
 			<div className="pageRow" id="booksBlock" style={{}}>
 				<div className="thisBlock">
 					<div className="blockBody">
@@ -110,10 +117,10 @@ render(){
 								<table>
 									<thead>
 									<tr>
-										<th className="">Name</th>
-										<th className="">Roll</th>
-										<th className="">Year</th>
-										<th className="">Issued</th>
+										<th style ={{color:'white'}} className="">Name</th>
+										<th style ={{color:'white'}} className="">Roll</th>
+										<th style ={{color:'white'}} className="">Year</th>
+										<th style ={{color:'white'}} className="">Issued</th>
 										
 									</tr>
 									</thead>
@@ -133,7 +140,14 @@ render(){
 			</div>
 			<div style={{height:'2px',background:'#d4d4d5'}}></div>
 
-				<div className="blockTitle" style={{fontSize:'1.3vw'}}>Transaction History</div>
+				<div className="row ml1">
+                        <div className="col-lg-3 ml130 mt70">
+                          <div className="d-flex position-relative float-left">
+                            <h1 className="section-title-3">Transaction History</h1>
+                          </div>
+                        </div>
+            	</div>
+
 				<div className="pageRow" id="booksBlock" >
 				<div className="thisBlock">
 					<div className="blockBody" >
@@ -142,12 +156,12 @@ render(){
 								<table>
 									<thead>
 									<tr>
-										<th className="">Name</th>
-										<th className="">Roll</th>
-										<th className="">Year</th>
-										<th className="">Issued</th>
-										<th className="">Return</th>
-										<th className="">Fine</th>
+										<th style ={{color:'white'}} className="">Name</th>
+										<th style ={{color:'white'}} className="">Roll</th>
+										<th style ={{color:'white'}} className="">Year</th>
+										<th style ={{color:'white'}} className="">Issued</th>
+										<th style ={{color:'white'}} className="">Return</th>
+										<th style ={{color:'white'}} className="">Fine</th>
 									</tr>
 									</thead>
 								</table>

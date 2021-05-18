@@ -220,7 +220,7 @@ body{
     height: 100%
 }
 .thisTable > .tbl-header{
-    background-color: #f2f3f4;
+    background-color: black;
 }
 .thisTable > .tbl-content{
     max-height: calc(100% - 40px);

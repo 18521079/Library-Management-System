@@ -70,10 +70,8 @@ return(
 
 
 		<Filter searchbook={this.searchbook}  fetchBooks={this.fetchBooks}/>
-		
-		<List fetchBooks={this.fetchBooks} books={this.state.bookList} fetched={this.state.fetched} />
-
-		<div className="footer">Made with &hearts; by Fahad Israr</div>
+		<div className="row mt4"></div>
+		<List className="mt4" fetchBooks={this.fetchBooks} books={this.state.bookList} fetched={this.state.fetched} />
 </div>
 
 

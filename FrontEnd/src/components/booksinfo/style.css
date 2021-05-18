@@ -1,3 +1,79 @@
+.ml1
+{
+    margin-left: 10px;
+}
+
+/* this is title */
+.section-title-1 {
+	font-size: 28px;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.14;
+	letter-spacing: normal;
+	color: #3e8177;
+	margin-bottom: 22px;
+    width: 130px !important;
+  }
+  
+  .section-title-1:after {
+	content: "";
+	width: 50px;
+	height: 2px;
+	background: #3e8177;
+	position: absolute;
+	right: -60px;
+	top: 14px;
+  }
+
+
+  .section-title-2 {
+	font-size: 28px;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.14;
+	letter-spacing: normal;
+	color: #3e8177;
+	margin-bottom: 22px;
+    width: 210px !important;
+  }
+  
+  .section-title-2:after {
+	content: "";
+	width: 50px;
+	height: 2px;
+	background: #3e8177;
+	position: absolute;
+	right: -60px;
+	top: 14px;
+  }
+
+
+  .section-title-3 {
+	font-size: 28px;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.14;
+	letter-spacing: normal;
+	color: #3e8177;
+	margin-bottom: 22px;
+    width: 260px !important;
+  }
+  
+  .section-title-3:after {
+	content: "";
+	width: 50px;
+	height: 2px;
+	background: #3e8177;
+	position: absolute;
+	right: -60px;
+	top: 14px;
+  }
+
+
+
 .pageView > .pageRow.custom{
     padding-top: 0;
 }
@@ -496,7 +572,7 @@ font-style:bold;
 
 
 }
-.load{
+/*.load{
 align-content: center;
 align-content: center;
 margin-
@@ -506,6 +582,7 @@ margin-
     font-weight: 500;
 
 }
+*/
 
 
 .redtxt{

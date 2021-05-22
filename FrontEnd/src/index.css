@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 body{
     width: 100%;
@@ -930,15 +931,16 @@ body{
     background-color: #ebeced;
 }
 .dialogBox > .dialogFooter > button:first-child{
-    font-size: 20px;
+    /*font-size: 20px;
     font-style: normal;
     font-stretch: normal;
     letter-spacing: normal;
     background-color: #fb8572;
-    color: #ffffff;
+    color: #ffffff;  */
 }
 .dialogBox > .dialogFooter > button:first-child:hover{
-    background-color: #ee7d6d;
+
+    /*background-color: #ee7d6d; */
 }
 @media screen and (min-width: 1600px) and (max-width: 1800px){
     .dialogBox{

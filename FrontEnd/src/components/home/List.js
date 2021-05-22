@@ -170,9 +170,9 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 						<div className="thisTable">
 							<div className="tbl-header">
 								<table className="table">
-								<thead style={{color:'white !important'}}className="thead-dark">
-									<tr>
-										<th className="">Name</th>
+								<thead style={{color:'white !important', fontSize:'22px'}}className="thead-dark">
+									<tr style={{ fontSize:'22px'}}>
+										<th style={{height:'80px'}} className="">Name</th>
 										<th className="">ID Book</th>
 										<th className="">Author</th>
 										<th className="">Publisher</th>

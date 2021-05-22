@@ -47,6 +47,7 @@ export default class Filters extends React.Component {
 		
 
 		return(
+			<>
 			<div className="pageRow filters">
 				<div className="thisBlock">
 					<div className="blockTitle">
@@ -68,10 +69,20 @@ export default class Filters extends React.Component {
 							
 						</div>	
 						
+						
 
 					</div>
+
+
+					
 					</div>
+
+					
+					
 			</div>
+
+			
+			</>
 		)
 	}
 }

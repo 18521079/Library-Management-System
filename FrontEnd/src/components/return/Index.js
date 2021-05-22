@@ -71,7 +71,23 @@ return(
 
 		<Filter searchbook={this.searchbook}  fetchBooks={this.fetchBooks}/>
 		<div className="row mt4"></div>
-		<List className="mt4" fetchBooks={this.fetchBooks} books={this.state.bookList} fetched={this.state.fetched} />
+		<List className="" fetchBooks={this.fetchBooks} books={this.state.bookList} fetched={this.state.fetched} />
+
+		<div className='row mt-7'>
+        <div className='col'></div>
+      <div className="col ">
+      <ul class=" ml5 pagination">
+        <li className="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li className="page-item"><a class="page-link" href="#">1</a></li>
+        <li className="page-item"><a class="page-link" href="#">2</a></li>
+        <li className="page-item"><a class="page-link" href="#">3</a></li>
+        <li className="page-item"><a class="page-link" href="#">4</a></li>
+        <li className="page-item"><a class="page-link" href="#">5</a></li>
+        <li className="page-item"><a class="page-link" href="#">Next</a></li>
+     </ul>
+    </div>
+    </div>
+
 </div>
 
 

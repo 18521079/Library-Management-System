@@ -164,11 +164,11 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 
 		return(
 			<div className="pageRow" id="booksBlock">
-				<div className="thisBlock">
+				<div className="thisBlock table-height">
 					<div className="blockBody">
 						<div className="thisTable">
 							<div className="tbl-header">
-								<table>
+								<table >
 								<thead className="thead-dark">
 									<tr>
 										<th style ={{color:'white'}}className="mt1">  Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>

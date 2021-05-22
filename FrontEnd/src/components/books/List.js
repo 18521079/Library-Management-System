@@ -121,16 +121,18 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookissue', {
 						<td className="">{item.author ? (item.author || '-') : '-'}</td>
 						
 						
-						<td className="">{item.edition ? (item.edition || '-') : '-'}</td>
+						
 						<td className="">{item.publisher ? (item.publisher || '-') : '-'}</td>
 						<td className="copies">{item.availablecopies ? (item.availablecopies || '-') : '-'}</td>
-						<td className="">{item.stackno ? (item.stackno || '-') : '-'}</td>
+						
 						<td className="">
 						
 
 						{item.availablecopies? 
 
-						<a style={{marginLeft:'4px'}} onClick={()=>{this.setState({bookid:item.id,bookname:item.name,author:item.author,publisher:item.publisher,edition:item.edition,isbn:item.isbn},List.showModal())}}>Issue</a>
+						<a style={{marginLeft:'4px'}} onClick={()=>{this.setState({bookid:item.id,bookname:item.name,author:item.author,publisher:item.publisher,edition:item.edition,isbn:item.isbn},List.showModal())}}><button className="btn  btn_normal mr5 mb3 mt3" >
+						<i class="far fa-id-card"></i> &nbsp; &nbsp; Issue
+                                </button></a>
 					     :
 					     <a style={{cursor:'not-allowed',opacity:'0.6',marginLeft:'4px'}}>Issue</a>
 					     }
@@ -165,19 +167,20 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookissue', {
 			<div className="pageRow" id="booksBlock">
 				<div className="thisBlock">
 					<div className="blockBody">
-						<div className="thisTable">
+						<div className="thisTable mt10 table-height-book">
 							<div className="tbl-header">
-								<table>
-									<thead>
-									<tr>
-										<th className="" style={{width:'20vw'}}>Name</th>
-										<th className="">ISBN</th>
-										<th className="">Author</th>
-										<th className="">Edition</th>
-										<th className="">Publisher</th>
-										<th className="">Avl.Copies</th>
-										<th className="">Stack</th>
-										<th className=" ">Action</th>
+								<table  >
+									<thead >
+									<tr style={{fontSize:'19px'}}>
+										
+										<th style ={{color:'white', width:'280px', height:'50px'}} className="">Name</th>
+										<th style ={{color:'white'}} className="">ID</th>
+										<th style ={{color:'white'}} className="">Author</th>
+									
+										<th style ={{color:'white'}} className="">Publisher</th>
+										<th style ={{color:'white'}} className="">Quantity</th>
+										
+										<th style ={{color:'white'}} className=" ">Action</th>
 									</tr>
 									</thead>
 								</table>

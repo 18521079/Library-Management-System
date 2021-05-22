@@ -3,6 +3,12 @@
     padding-bottom: 0;
     height: calc(100% - 80px);
 }
+
+.table-height
+{
+    height: 400px !important;
+}
+
 .pageView > .pageRow#booksBlock > .thisBlock,
 .pageView > .pageRow#booksBlock > .thisBlock > .blockBody{
     height: 100%;
@@ -147,7 +153,9 @@ thead
 {
     margin-top: 10px !important;
 }
-
+.mt-7{
+    margin-top: -70px !important;
+}
 table{
     font-family: ''Raleway'' !important;
     color: black !important;

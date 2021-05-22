@@ -1,3 +1,85 @@
+/*title section*/
+.btn_normal{
+	color:#3AE7E1 !important;
+	background-color:white !important;
+	border-color: #3AE7E1 !important;
+	transition: all 1s ;
+	-moz-transition: all 1s;
+	-webkit-transition: all 1s;
+
+}
+
+.btn_normal:hover{
+	transform:translate(3px,5px);
+	transform-origin: 100%;
+	background-color: white !important;
+	color: #3AE7E1 !important;
+}
+
+.btndefaul{
+	color: whitesmoke !important;
+	background-color: #3AE7E1 !important;
+	border-color: #3AE7E1 !important;
+	transition: all 1s;
+	-moz-transition: all 1s;
+	-webkit-transition: all 1s;
+
+}
+
+.btndefaul:hover{
+	transform:translate(3px,5px);
+	transform-origin: 100%;
+	color: white !important;
+	
+}
+
+.section-title_4 {
+	font-size: 28px;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.14;
+	letter-spacing: normal;
+	color: #3e8177 !important;
+	margin-bottom: 22px;
+  width: 130px !important;
+  }
+  
+  .section-title_4:after {
+	content: "";
+	width: 50px;
+	height: 2px;
+	background: #3e8177;
+	position: absolute;
+	right: -60px;
+	top: 14px;
+  }
+
+  .ml-288{
+      margin-left: -288px !important;
+}
+
+.mt10
+{
+    margin-top: 90px !important;
+}
+
+/* this is ajust height area*/
+.table-height-book
+{
+    height: 340px !important;
+}
+
+/* this is ajust size */
+.tableRow td
+{
+    font-size: 17px !important;
+}
+
+.mt-3-books
+{
+    margin-top: -40px !important;
+}
 .pageView > .pageRow#booksBlock{
     padding-top: 0;
     padding-bottom: 0;

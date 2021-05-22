@@ -120,23 +120,51 @@ let wid='20vw';
 		return(
 			<div className="pageRow filters">
 				<div className="thisBlock">
-					<div className="blockTitle"><t style={{marginLeft:'10px'}}>Book List</t>
-						<button className="addBtn" onClick={Filters.showModal}>Add</button>
-						<label className="addBtnIcon" onClick={Filters.showModal}>+</label>
-                        <input type="text" className="searchInput" style={{width:'300px',cursor:'text'}} placeholder="Search by Name,ISBN,Author,Publisher" value={this.state.searchDevice} autoComplete="off" name="search" onChange={this.updateInfo}/>
+					<div className="blockTitle">
+                        
+                    <div className="row">
+                        <div className="col-lg-3 ml130 mt70">
+                          <div className="d-flex position-relative float-left">
+                            <h1 className="section-title_4">Book List</h1>
+                          </div>
+                        </div>
+                      </div>
+
+                    {/*this is button add books*/}
+					  <div className="row">
+						  <div className='col-6'>
+
+					  <div className="text-center ml-288"><button onClick={Filters.showModal} style={{fontSize:'1.1em'}} className="btn  btn_normal mr5 mb3 mt3" >
+                                                <i className="fas fa-plus-circle"></i>  &nbsp; &nbsp; Add books
+                                </button></div>
+								</div>
+
+								{/*this is search*/}	
+								<div className="input-group rounded col">
+									<input value={this.state.searchDevice}  type="search" className="form-control rounded" placeholder="Search by Book Info Or Student Info" autoComplete="off" name="search" onChange={this.updateInfo}  aria-label="Search"
+										aria-describedby="search-addon" />
+								
+										<i style={{fontSize:'1.5em'}} className="fas fa-search"></i>
+							
+								</div>	
+
+					  </div>
+
+
 
 									<dialog id="addBook" className="dialogBox" onClick={Filters.hideModal} style={{width:'70vw'}}>
-										<div className="dialogTitle" onClick={Filters.preventHide}>
+										<div style={{background:'#87CEFA'}} className="dialogTitle" onClick={Filters.preventHide}>
 											Add New Book
+                                            
 											<button onClick={Filters.hideModal}>X</button>
 										</div>
-										<div className="dialogBody" onClick={Filters.preventHide} >
+										<div style={{background:'#F0F8FF'}} className="dialogBody" onClick={Filters.preventHide} >
 											<div style={{width:wid}}>
 												<label>Name*</label>
 												<input onChange={this.updateInfo} name="bookname" value={this.state.bookname}/>
 											</div>
 											<div style={{width:wid}}>
-												<label >ISBN</label>
+												<label >ID</label>
 												<input onChange={this.updateInfo} name="isbn" value={this.state.isbn}/>
 											</div>
 											<div style={{width:wid}}>
@@ -151,18 +179,12 @@ let wid='20vw';
 												<label>Copyright Year</label>
 												<input onChange={this.updateInfo} name="copyrightyear" value={this.state.copyrightyear}/>
 											</div>
-											<div style={{width:wid}}>
-												<label>Edition</label>
-												<input onChange={this.updateInfo} name="edition" value={this.state.edition}/>
-											</div>
+											
 											<div style={{width:wid}}>
 												<label>Print Year</label>
 												<input onChange={this.updateInfo} name="printyear" value={this.state.printyear}/>
 											</div>
-											<div style={{width:wid}}>
-												<label>Stack No.</label>
-												<input onChange={this.updateInfo} name="stackno" value={this.state.stackno}/>
-											</div>
+											
 											<div style={{width:wid}}>
 												<label>Volume</label>
 												<input onChange={this.updateInfo} name="volume" value={this.state.volume}/>
@@ -197,8 +219,16 @@ let wid='20vw';
 											
 										</div>
 										<div className="dialogFooter" onClick={Filters.preventHide}>
-											<button onClick={this.add} disabled={!this.state.bookname || !this.state.author||!this.state.totalcopies}>Add</button>
-											<button onClick={Filters.hideModal}>Cancel</button>
+											{/* <button onClick={this.add} disabled={!this.state.bookname || !this.state.author||!this.state.totalcopies}>Add</button> */}
+											<button className="btn  btn_normal ml5 mr5" onClick={this.test}>
+                                       			 <i className="fa fa-plus"></i>  &nbsp;  &nbsp;&nbsp; &nbsp; &nbsp; Add
+                                    		</button>
+											{/*<button onClick={Filters.hideModal}>Cancel</button> */}
+											
+											<button className="btn btndefaul">
+												<i className="fas fa-times-circle mr-2"></i> &nbsp;Cancel
+											</button>
+                                
 										</div>
 									</dialog>
 

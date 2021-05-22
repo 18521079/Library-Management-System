@@ -179,7 +179,6 @@ fetch('https://stark-hamlet-65683.herokuapp.com/countstudent', {
 </div>
 {/* Content Row */}
 
-
 {/* Content Row */}
 <div className="row">
  {/* Content Column */}
@@ -192,21 +191,21 @@ fetch('https://stark-hamlet-65683.herokuapp.com/countstudent', {
     <div className="card-body">
       <h4 className="small font-weight-bold">DATA COMMUNICATIONS AND NETWORKS <span className="float-right">20 ISSUED</span></h4>
       <div className="progress mb-4">
-        <div className="progress-bar bg-danger" role="progressbar" style={{"width":"20%"}} aria-valuenow={20} aria-valuemin={0} aria-valuemax={100} />
+        <div className="progress-bar bg-danger" role="progressbar" style={{"width":"20%", color:"#A8DEE0"}} aria-valuenow={20} aria-valuemin={0} aria-valuemax={100} />
       </div>
-      <h4 className="small font-weight-bold">Sales Tracking <span className="float-right">40 ISSUED</span></h4>
+      <h4 className="small font-weight-bold">ADVANCED MATHEMATICS <span className="float-right">31 ISSUED</span></h4>
       <div className="progress mb-4">
         <div className="progress-bar bg-warning" role="progressbar" style={{"width":"40%"}} aria-valuenow={40} aria-valuemin={0} aria-valuemax={100} />
       </div>
-      <h4 className="small font-weight-bold">Customer Database <span className="float-right">40 ISSUED</span></h4>
+      <h4 className="small font-weight-bold">NETWORKING <span className="float-right">49 ISSUED</span></h4>
       <div className="progress mb-4">
         <div className="progress-bar" role="progressbar" style={{"width":"60%"}} aria-valuenow={60} aria-valuemin={0} aria-valuemax={100} />
       </div>
-      <h4 className="small font-weight-bold">Payout Details <span className="float-right">40 ISSUED</span></h4>
+      <h4 className="small font-weight-bold">ENGINEERING MATHEMATICS <span className="float-right">51 ISSUED</span></h4>
       <div className="progress mb-4">
         <div className="progress-bar bg-info" role="progressbar" style={{"width":"80%"}} aria-valuenow={80} aria-valuemin={0} aria-valuemax={100} />
       </div>
-      <h4 className="small font-weight-bold">Payout Details <span className="float-right">40 ISSUED</span></h4>
+      <h4 className="small font-weight-bold">OBJECT ORIENTED PROGRAMMING <span className="float-right">53 ISSUED</span></h4>
       <div className="progress mb-4">
         <div className="progress-bar bg-info" role="progressbar" style={{"width":"80%"}} aria-valuenow={80} aria-valuemin={0} aria-valuemax={100} />
       </div>

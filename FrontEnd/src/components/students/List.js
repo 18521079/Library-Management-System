@@ -91,19 +91,20 @@ export default class ListIndex extends React.Component {
 			<div className="pageRow" id="booksBlock">
 				<div className="thisBlock">
 					<div className="blockBody">
-						<div className="thisTable">
+						<div className="thisTable mt9">
 							<div className="tbl-header">
 								<table>
-									<thead>
-									<tr>
-										<th className="">Name</th>
-										<th className="">Roll</th>
-										<th className="">Phone</th>
-										<th className="">Year</th>
-										<th className="">Branch</th>
-										<th className="">Issued Books</th>
+									<thead style={{fontSize:'18px', color:'white'}}>
+									<tr style={{ color:'white'}}>
+									
+										<th style={{height:'50px', color:'white'}} className="">Name</th>
+										<th style={{height:'50px', color:'white'}} className="">ID</th>
+										<th style={{height:'50px', color:'white'}} className="">Phone</th>
+										<th style={{height:'50px', color:'white'}} className="">Year</th>
+										<th style={{height:'50px', color:'white'}} className="">Class</th>
+										<th style={{height:'50px', color:'white'}} className="">Issued Books</th>
 										
-										<th className=" ">Action</th>
+										<th style={{height:'50px', color:'white'}} className=" ">Action</th>
 									</tr>
 									</thead>
 								</table>

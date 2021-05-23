@@ -88,10 +88,36 @@ let wid='15vw';
 		return(
 			<div className="pageRow filters">
 				<div className="thisBlock">
-					<div className="blockTitle"><t style={{marginLeft:'10px'}}>Student List</t>
-						<button className="addBtn" onClick={Filters.showModal}>Add</button>
-						<label className="addBtnIcon" onClick={Filters.showModal}>+</label>
-                        <input type="text" className="searchInput" style={{width:'300px',cursor:'text'}} placeholder="Search by Name,roll,branch,year" value={this.state.searchStudent} autoComplete="off" name="search" onChange={this.updateInfo}/>
+					<div className="blockTitle">
+					<div className="row">
+                        <div className="col-lg-3 ml130 mt70">
+                          <div className="d-flex position-relative float-left">
+                            <h1 className="section-title-list-student">Student List</h1>
+                          </div>
+                        </div>
+                      </div>
+
+						{/*this is button add books*/}
+						<div className="row">
+						  <div className='col-6 ml0'>
+
+					  <div className="text-center"><button onClick={Filters.showModal} style={{fontSize:'1.1em'}} className="btn  btn_normal mb3 mt3" >
+                                                <i className="fas fa-plus-circle"></i>  &nbsp; &nbsp; Add Student
+                                </button></div>
+								</div>
+
+								{/*this is search*/}	
+								<div className="input-group rounded col ml3">
+									<input value={this.state.searchStudent} type="search" className="form-control rounded" placeholder="Search by Name,ID,class,year" autoComplete="off" name="search" onChange={this.updateInfo}  aria-label="Search"
+										aria-describedby="search-addon" />
+								
+										<i style={{fontSize:'1.5em'}} className="fas fa-search"></i>
+							
+								</div>	
+
+					  </div>
+
+						
 
 									<dialog id="addStudent" className="dialogBox" onClick={Filters.hideModal} >
 										<div className="dialogTitle" onClick={Filters.preventHide}>
@@ -104,7 +130,7 @@ let wid='15vw';
 												<input onChange={this.updateInfo} name="name" value={this.state.name}/>
 											</div>
 											<div style={{width:wid}}>
-												<label>Roll</label>
+												<label>ID</label>
 												<input onChange={this.updateInfo} name="roll" value={this.state.roll}/>
 											</div>
 											<div style={{width:wid}}>
@@ -116,7 +142,7 @@ let wid='15vw';
 												<input onChange={this.updateInfo} name="year" value={this.state.year}/>
 											</div>
 											<div style={{width:wid}}>
-												<label>Branch</label>
+												<label>Class</label>
 												<input onChange={this.updateInfo} name="branch" value={this.state.branch}/>
 											</div>
 											

@@ -160,7 +160,7 @@ let wid='20vw';
 										</div>
 										<div style={{background:'#F0F8FF'}} className="dialogBody" onClick={Filters.preventHide} >
 											<div style={{width:wid}}>
-												<label>Name*</label>
+												<label>Name *</label>
 												<input onChange={this.updateInfo} name="bookname" value={this.state.bookname}/>
 											</div>
 											<div style={{width:wid}}>
@@ -168,7 +168,7 @@ let wid='20vw';
 												<input onChange={this.updateInfo} name="isbn" value={this.state.isbn}/>
 											</div>
 											<div style={{width:wid}}>
-												<label>Author*</label>
+												<label>Author *</label>
 												<input onChange={this.updateInfo} name="author" value={this.state.author}/>
 											</div>
 											<div style={{width:wid}}>
@@ -189,16 +189,10 @@ let wid='20vw';
 												<label>Volume</label>
 												<input onChange={this.updateInfo} name="volume" value={this.state.volume}/>
 											</div>
+											
+											
 											<div style={{width:wid}}>
-												<label>Accession Number</label>
-												<input onChange={this.updateInfo} name="accessionno" value={this.state.accessionno}/>
-											</div>
-											<div style={{width:wid}}>
-												<label>Pages</label>
-												<input onChange={this.updateInfo} name="pages" value={this.state.pages}/>
-											</div>
-											<div style={{width:wid}}>
-												<label>Total Copies*</label>
+												<label>Quantily*</label>
 												<input onChange={this.updateInfo} name="totalcopies" value={this.state.totalcopies}/>
 											</div>
 											

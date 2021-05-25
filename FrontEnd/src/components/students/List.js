@@ -53,9 +53,9 @@ export default class ListIndex extends React.Component {
 						<td className="copies">{item.issued ? (item.issued || '-') : '-'}</td>
 						
 						<td className="">
-						<Link to={"/student/"+item.id} draggable="false"  className="">View</Link>
-						
-						
+						<Link to={"/student/"+item.id} draggable="false"  className="ml1"><i style={{color:"#87CEFA", fontSize:'1.4em'}} class="fas fa-user-graduate"></i></Link>
+						<Link to={"/student/"+item.id} draggable="false"  className="ml1"><i  style={{color:"#87CEFA", fontSize:'1.4em'}} class="far fa-edit"></i></Link>
+						<Link to={"/student/"+item.id} draggable="false"  className="ml1"><i style={{color:"#87CEFA", fontSize:'1.4em'}} class="far fa-trash-alt"></i></Link>
 
 						</td>
 					</tr>
@@ -93,7 +93,7 @@ export default class ListIndex extends React.Component {
 					<div className="blockBody">
 						<div className="thisTable mt9">
 							<div className="tbl-header">
-								<table>
+								<table className=' height-table-student'>
 									<thead style={{fontSize:'18px', color:'white'}}>
 									<tr style={{ color:'white'}}>
 									
@@ -109,9 +109,9 @@ export default class ListIndex extends React.Component {
 									</thead>
 								</table>
 							</div>
-							<div className="tbl-content">
+							<div className="tbl-content height-table-student">
 								<table>
-									<tbody>
+									<tbody style={{fontSize:'17px'}}>
 										{itemList}
 									</tbody>
 								</table>

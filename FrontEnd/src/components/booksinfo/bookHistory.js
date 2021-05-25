@@ -52,7 +52,7 @@ render(){
 						
 						<td className="" style={{whiteSpace: 'pre-wrap'}}>{item.issue ? ((new Date(Date.parse(item.issue))).toDateString()+'\n'+(new Date(Date.parse(item.issue))).toLocaleTimeString() || '-') : '-'}</td>
 						<td className="" style={{whiteSpace: 'pre-wrap'}}>{item.return ? ((new Date(Date.parse(item.return))).toDateString()+'\n'+(new Date(Date.parse(item.return))).toLocaleTimeString() || '-') : '-'}</td>
-						<td className={!(item.fine=="Nill")?"redtxt":null}>{item.fine ? (item.fine || '-') : '-'}</td>
+						<td className={!(item.fine=="0")?"redtxt":null}>{item.fine ? (item.fine || '-') : '-'}</td>
 						
 					</tr>
 				)
@@ -117,10 +117,10 @@ render(){
 								<table>
 									<thead>
 									<tr>
-										<th style ={{color:'white'}} className="">Name</th>
-										<th style ={{color:'white'}} className="">Roll</th>
-										<th style ={{color:'white'}} className="">Year</th>
-										<th style ={{color:'white'}} className="">Issued</th>
+										<th style ={{color:'white'}} className="heigh-th">Name</th>
+										<th style ={{color:'white'}} className="heigh-th">ID</th>
+										<th style ={{color:'white'}} className="heigh-th">Year</th>
+										<th style ={{color:'white'}} className="heigh-th">Issued</th>
 										
 									</tr>
 									</thead>
@@ -156,12 +156,12 @@ render(){
 								<table>
 									<thead>
 									<tr>
-										<th style ={{color:'white'}} className="">Name</th>
-										<th style ={{color:'white'}} className="">Roll</th>
-										<th style ={{color:'white'}} className="">Year</th>
-										<th style ={{color:'white'}} className="">Issued</th>
-										<th style ={{color:'white'}} className="">Return</th>
-										<th style ={{color:'white'}} className="">Fine</th>
+										<th style ={{color:'white'}} className="heigh-th">Name</th>
+										<th style ={{color:'white'}} className="heigh-th">ID</th>
+										<th style ={{color:'white'}} className="heigh-th">Year</th>
+										<th style ={{color:'white'}} className="heigh-th">Issued</th>
+										<th style ={{color:'white'}} className="heigh-th">Return</th>
+										<th style ={{color:'white'}} className="heigh-th">Fine</th>
 									</tr>
 									</thead>
 								</table>

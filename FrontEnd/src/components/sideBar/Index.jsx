@@ -37,7 +37,7 @@ export default class SideBar extends React.Component{
 		let {visi}=this.state;
 		return(
 			<div >
-				<div id="mySidenav" className='sidenav' onMouseEnter={()=>	this.setState({visi:true})} onMouseLeave={()=>this.setState({visi:false})}>
+			{/*	<div id="mySidenav" className='sidenav' onMouseEnter={()=>	this.setState({visi:true})} onMouseLeave={()=>this.setState({visi:false})}>
 					<Link to="/home" className={this.state.activeState === 'home' || this.state.activeState === '' ? 'sideNavItem activeSideItem': 'sideNavItem'}
 						   onClick={() => { this.setActive('home');}} draggable="false">
 	
@@ -56,6 +56,13 @@ export default class SideBar extends React.Component{
 						<img src={ReturnIcon} alt="Return Book" draggable="false" />Return
 						<br/><div className={visi?"visib":"invisib"}>&nbsp;</div>
 					</Link>
+
+					<Link to="/return" className={this.state.activeState === 'return' || this.state.activeState === '' ? 'sideNavItem activeSideItem': 'sideNavItem'}
+						   onClick={() => { this.setActive('return');}} draggable="false">
+						<i style={{fontSize:"1.8em"}} class="far fa-id-card"></i> &nbsp; &nbsp; &nbsp;Issue
+						<br/><div className={visi?"visib":"invisib"}>&nbsp;</div>
+					</Link>
+
 					<Link to="/students" className={this.state.activeState === 'students' || this.state.activeState === '' ? 'sideNavItem activeSideItem': 'sideNavItem'}
 						   onClick={() => { this.setActive('students');}} draggable="false">
 						<img src={StudentsIcon} alt="Students" draggable="false" />Student
@@ -63,6 +70,88 @@ export default class SideBar extends React.Component{
 					</Link>
 					
 				</div>
+		*/}
+
+
+<div className="sidebar" id="mySidenav"   onMouseEnter={()=>	this.setState({visi:true})} onMouseLeave={()=>this.setState({visi:false})}>
+  <div className="sidebar-top">
+    <i className="logo fab fa-sketch" />
+    <span className="brand">The App</span>
+  </div>
+  <div className="sidebar-center">
+    <ul className="list">
+		
+	<Link  style={{color:'#b4bbc7'}} class="disabled-link" to="/home" className={this.state.activeState === 'home' || this.state.activeState === '' ? 'sideNavItem active': 'sideNavItem'}
+						   onClick={() => { this.setActive('home');}} draggable="false">
+      <li className="list-item mt3-nav ">
+        <i className="list-item-icon fas fa-home" />
+        <span className="list-item-text">Dashboard</span>
+      </li>
+	  </Link>
+	 
+	  <Link style={{color:'#b4bbc7'}} to="/books_management" className={this.state.activeState === 'books' || this.state.activeState === '' ? 'sideNavItem activeSideItem': 'sideNavItem'}
+						   onClick={() => { this.setActive('books');}} draggable="false">
+      <li className="list-item">
+        <i className="list-item-icon fas fa-search" />
+        <span className="list-item-text">Books</span>
+      </li>
+	  </Link>
+	  
+	  <Link style={{color:'#b4bbc7'}} to="/books" className={this.state.activeState === 'books' || this.state.activeState === '' ? 'sideNavItem activeSideItem': 'sideNavItem'}
+						   onClick={() => { this.setActive('books');}} draggable="false">
+      <li className="list-item">
+	  
+        <i className="list-item-icon fas fa-stream" />
+        <span className="list-item-text">Issue</span>
+		
+      </li>
+	  </Link>
+
+	  <Link  style={{color:'#b4bbc7'}} to="/return" className={this.state.activeState === 'return' || this.state.activeState === '' ? 'sideNavItem activeSideItem': 'sideNavItem'}
+						   onClick={() => { this.setActive('return');}} draggable="false">
+      <li className="list-item">
+        <i className="list-item-icon fas fa-book" />
+        <span className="list-item-text">Return</span>
+      </li>
+	  </Link>
+	
+
+	  <Link style={{color:'#b4bbc7'}} to="/students" className={this.state.activeState === 'students' || this.state.activeState === '' ? 'sideNavItem activeSideItem': 'sideNavItem'}
+						   onClick={() => { this.setActive('students');}} draggable="false">
+      <li className="list-item">
+        <i className="list-item-icon fas fa-users" />
+        <span className="list-item-text">Student</span>
+      </li>
+	  </Link>
+
+
+      <li className="list-item">
+        <i className="list-item-icon fas fa-toolbox" />
+        <span className="list-item-text">Report</span>
+      </li>
+      <li className="list-item">
+        <i className="list-item-icon fas fa-shopping-basket" />
+        <span className="list-item-text">Account</span>
+      </li>
+      <li className="list-item">
+        <i className="list-item-icon far fa-question-circle" />
+        <span className="list-item-text">Help</span>
+      </li>
+    </ul>
+  </div>
+  <div className="sidebar-bottom">
+    <div className=""  >
+	<i style={{fontSize:'2.0em'}} class="fab fa-facebook"></i>
+	</div>
+    <div className="ml1" >
+	<i style={{fontSize:'2.0em'}} class="fab fa-twitter-square"></i>
+	</div>
+    <div className="ml1" >
+	<i style={{fontSize:'2.0em'}} class="fab fa-invision"></i>
+	</div>
+  </div>
+</div>
+
 			</div>
 		)
 	}

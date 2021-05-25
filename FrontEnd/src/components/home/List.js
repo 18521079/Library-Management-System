@@ -223,12 +223,12 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 															<input  name="Year" placeholder="Year" value={this.state.studentname}/>
 														</div>
 														<div style={{width:wid}}>
-															<label>Roll</label>
+															<label>ID Student</label>
 															<input name="Roll" placeholder="Roll" value={this.state.roll}/>
 														</div>
 														<div style={{width:wid}}>
 															<label className={this.state.fine>0?"redtxt":""}>Fine Amount</label>
-															<input name="Fine" placeholder="Fine" className="bold" value={this.state.fine>0?'INR '+this.state.fine+'.00':'Nill'}/>
+															<input name="Fine" placeholder="Fine" className="bold" value={this.state.fine>0?' '+this.state.fine+'.00':'Nill'}/>
 														</div>
 														
 														

@@ -3,6 +3,13 @@
     margin-left: 10px !important;
 }
 
+.heigh-th
+{
+    height: 40px !important;
+    font-size: 18px;
+}
+
+
 /* this is title */
 .section-title-1 {
 	font-size: 28px;

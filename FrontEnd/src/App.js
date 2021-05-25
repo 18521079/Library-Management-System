@@ -44,6 +44,10 @@ const StudentsIndex = Loadable({
     loading: () => <div> </div>,
 });
 
+const BooksManageMentIndex = Loadable({
+    loader: () => import('./components/booksManagement/Index'),
+    loading: () => <div> </div>,
+});
 
 const NotFound = Loadable({
     loader: () => import('./components/notfound/Index'),
@@ -102,6 +106,7 @@ componentDidMount(){
                     <Route path="/return" component={ReturnIndex} />
                     <Route path="/students" component={StudentsIndex} />
                     <Route path="/book/*" component={BooksInfoIndex} />
+                    <Route path="/books_management" component={BooksManageMentIndex} />
                     <Route path="/student/*" component={StudentsInfoIndex} />
                      <Route exact path="*" component={NotFound} />
                     </Switch>

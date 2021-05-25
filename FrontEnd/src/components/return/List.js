@@ -195,14 +195,14 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 						</div>
 					</div>
 				</div>
-										<dialog id="returnBook" className="dialogBox" onClick={List.hideModal} style={{width:'50vw'}}>
-										<div className="dialogTitle" onClick={List.preventHide}>
+										<dialog style={{background:'#87CEFA'}}  id="returnBook" className="dialogBox" onClick={List.hideModal} style={{width:'50vw'}}>
+										<div style={{background:'#87CEFA'}} className="dialogTitle" onClick={List.preventHide}>
 											Return Book
 											<button onClick={List.hideModal}>X</button>
 										</div>
 										
 
-												<div className="dialogBody" onClick={List.preventHide} >
+												<div   className="dialogBody" onClick={List.preventHide} >
 
 														
 														<div style={{width:wid}}>
@@ -229,7 +229,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 
 														<div style={{width:wid}}>
 															<label className={this.state.fine>0?"redtxt":""}>Fine Amount</label>
-															<input name="Fine" placeholder="Fine" className="bold" value={this.state.fine>0?'INR '+this.state.fine+'.00':'0'}/>
+															<input name="Fine" placeholder="Fine" className="bold" value={this.state.fine>0?' '+this.state.fine+'.00':'0'}/>
 														</div>
 														
 														

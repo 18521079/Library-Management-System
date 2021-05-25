@@ -136,7 +136,9 @@ let wid='20vw';
 					  <div className="row">
 						  <div className='col-6'>
 
-					  <div className="text-center ml-288"></div>
+					  <div className="text-center ml-288"><button onClick={Filters.showModal} style={{fontSize:'1.1em'}} className="btn  btn_normal mr5 mb3 mt3" >
+                                                <i className="fas fa-plus-circle"></i>  &nbsp; &nbsp; Add books
+                                </button></div>
 								</div>
 
 								{/*this is search*/}	
@@ -167,7 +169,7 @@ let wid='20vw';
 													onChange={this.onChangeDate}
 													/>
 											</div>
-
+											
 											<div style={{width:wid}}>
 												<label>Name *</label>
 												<input onChange={this.updateInfo} name="bookname" value={this.state.bookname}/>

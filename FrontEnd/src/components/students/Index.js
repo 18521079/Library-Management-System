@@ -96,7 +96,7 @@ return(
 		
 		<List fetchStudents={this.fetchStudents} books={this.state.bookList} fetched={this.state.fetched}/>
 
-		<div className="footer">Made with &hearts; by Fahad Israr</div>
+	
 </div>
 
 

@@ -1,3 +1,13 @@
+.ml1
+{
+    margin-left: 10px;
+}
+/* height table */
+.height-table-student
+{
+    height: 300px !important;
+    font-size: 18px !important;
+}
 /*btn */
 .btn_normal{
 	color:#3AE7E1;

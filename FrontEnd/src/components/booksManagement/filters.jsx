@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {useState } from 'react';
 import './style.css'
 import { toast } from 'react-toastify';	
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
+import TextField from '@material-ui/core/TextField';
+import { Multiselect } from 'multiselect-react-dropdown';
+
+
 export default class Filters extends React.Component {
 
 /*eslint-disable no-unused-expressions */
@@ -11,11 +15,16 @@ export default class Filters extends React.Component {
 		this.state = {
 			bookList:[],
 			search:'',
-			date: new Date()
-			
-			
+			date: new Date(),
+			options: [{name: 'Raoul-Gabriel Urma', id: 1},
+			{name: 'SEDRA SMITH', id: 2},
+			{name: 'Benjamin Evans', id: 3},
+			{name: 'Arun Gupta', id: 4},
+			{name: 'Christian Posta', id: 5}
+		]
 
 		};
+		
 		
 	}
 
@@ -155,12 +164,12 @@ let wid='20vw';
 
 
 									<dialog id="addBook" className="dialogBox" onClick={Filters.hideModal} style={{width:'70vw'}}>
-										<div style={{background:'#87CEFA'}} className="dialogTitle" onClick={Filters.preventHide}>
+										<div style={{background:'#282829'}} className="dialogTitle" onClick={Filters.preventHide}>
 											Add New Book
                                             
 											<button onClick={Filters.hideModal}>X</button>
 										</div>
-										<div style={{background:'#F0F8FF'}} className="dialogBody" onClick={Filters.preventHide} >
+										<div style={{background:'white'}} className="dialogBody" onClick={Filters.preventHide} >
 
 										<div style={{width:wid}}>
 												<label> <i class="far fa-calendar-alt"></i> Add date </label>
@@ -172,69 +181,162 @@ let wid='20vw';
 											
 											<div style={{width:wid}}>
 												<label>Name *</label>
-												<input onChange={this.updateInfo} name="bookname" value={this.state.bookname}/>
+											{/*	<div className="form-outline">
+												<input onChange={this.updateInfo} name="bookname" value={this.state.bookname} type="text" id="form1" className="form-control"/>
+												</div>
+												{/*<div className="form-outline">
+													<input onChange={this.updateInfo} name="bookname" value={this.state.bookname} type="text" id="form1" className="form-control" />
+												
+												</div> */}
+
+								<div className="form-outline">
+													<input onChange={this.updateInfo} name="bookname" value={this.state.bookname} type="text" id="form1" className="form-control" />
+												
+												</div> 
+									
+									
 											</div>
 											<div style={{width:wid}}>
 												<label >ID</label>
-												<input onChange={this.updateInfo} name="isbn" value={this.state.isbn}/>
+
+												<div className="form-outline">
+												<input onChange={this.updateInfo} name="isbn" value={this.state.isbn} type="text" id="form1" className="form-control"/>
+												</div>
+
 											</div>
 											<div style={{width:wid}}>
 												<label>Author *</label>
-												<input onChange={this.updateInfo} name="author" value={this.state.author}/>
+
+												{/*<div className="form-outline">
+												<input onChange={this.updateInfo} name="author" value={this.state.author} type="text" id="form1" className="form-control"/>
+												</div>
+											*/}
+											
+											<Multiselect
+												options={this.state.options} // Options to display in the dropdown
+												selectedValues={this.state.selectedValue} // Preselected value to persist in dropdown
+												onSelect={this.onSelect} // Function will trigger on select event
+												onRemove={this.onRemove} // Function will trigger on remove event
+												displayValue="name" // Property name to display in the dropdown options
+												showCheckbox="bool"
+												hidePlaceholder="bool"
+												/>
+
+
 											</div>
 											<div style={{width:wid}}>
 												<label>Publisher</label>
-												<input onChange={this.updateInfo} name="publisher" value={this.state.publisher}/>
+
+												{/*<div className="form-outline">
+												<input onChange={this.updateInfo} name="publisher" value={this.state.publisher} type="text" id="form1" className="form-control"/>
+												</div>
+										*/}
+
+<div className="form-group">
+									  <select name='publisher' value={this.state.publisher} onClick= {this.onClick} className="form-control" required="required"  placeholder="Category" >
+                                        <option value={1}>Hachette Livre</option>
+                                        <option value={0}>HarperCollins</option>
+                                        <option value={2}>Macmillan</option>
+										<option value={3}>Pearson</option>
+										<option value={4}>Scholastic</option>
+										<option value={5}>Wiley</option>
+										<option value={6}>Kodansha</option>
+                                      </select>
+									</div>
+
 											</div>
 											<div style={{width:wid}}>
 												<label>Copyright Year</label>
-												<input onChange={this.updateInfo} name="copyrightyear" value={this.state.copyrightyear}/>
+
+												<div className="form-outline">
+												<input onChange={this.updateInfo} name="copyrightyear" value={this.state.copyrightyear} type="text" id="form1" className="form-control"/>
+												</div>
+
 											</div>
 											
 											<div style={{width:wid}}>
 												<label>Print Year</label>
-												<input onChange={this.updateInfo} name="printyear" value={this.state.printyear}/>
+
+												<div className="form-outline">
+												<input onChange={this.updateInfo} name="printyear" value={this.state.printyear} type="text" id="form1" className="form-control"/>
+												
+												</div>
+
 											</div>
 											
 											<div style={{width:wid}}>
 												<label>Volume</label>
-												<input onChange={this.updateInfo} name="volume" value={this.state.volume}/>
+
+												<div className="form-outline">
+												<input onChange={this.updateInfo} name="volume" value={this.state.volume} type="text" id="form1" className="form-control"/>
+												</div>
+
 											</div>
 											
 											
 											<div style={{width:wid}}>
 												<label>Quantily*</label>
-												<input onChange={this.updateInfo} name="totalcopies" value={this.state.totalcopies}/>
+
+												<div className="form-outline">
+												<input onChange={this.updateInfo} name="totalcopies" value={this.state.totalcopies} type="text" id="form1" className="form-control"/>
+												</div>
 											</div>
 											
 											<div style={{width:wid}}>
 												<label>Type</label>
-												<input onChange={this.updateInfo} name="type" value={this.state.type}/>
+
+												{/*<div className="form-outline">
+												<input onChange={this.updateInfo} name="type" value={this.state.type} type="text" id="form1" className="form-control"/>
+												</div>
+											*/}
+ 									<div className="form-group">
+									  <select name='publisher' value={this.state.publisher} onClick= {this.onClick} className="form-control" required="required"  placeholder="Category" >
+                                        <option value={1}>Programming</option>
+                                        <option value={0}>Mathematics</option>
+                                        <option value={2}>Supporting Fields</option>
+										<option value={3}>Operating System</option>
+										<option value={4}>Computer Science</option>
+										<option value={5}>Operating System</option>
+										<option value={6}>Miscellaneous</option>
+                                      </select>
+									</div>
+
+
 											</div>
 											<div style={{width:wid}}>
 												<label>Price</label>
-												<input onChange={this.updateInfo} name="price" value={this.state.price}/>
+
+												<div className="form-outline">
+												<input onChange={this.updateInfo} name="price" value={this.state.price} type="text" id="form1" className="form-control"/>
+												</div>
+
 											</div>
 											<div style={{width:wid}}>
 												<label>Additionals</label>
-												<input onChange={this.updateInfo} name="additionals" value={this.state.additionals}/>
+
+												<div className="form-outline">
+												<input onChange={this.updateInfo} name="additionals" value={this.state.additionals} type="text" id="form1" className="form-control"/>
+												</div>
+
 											</div>
 											
 										
 											
-										</div>
-										<div className="dialogFooter" onClick={Filters.preventHide}>
+										
+										
 											{/* <button onClick={this.add} disabled={!this.state.bookname || !this.state.author||!this.state.totalcopies}>Add</button> */}
-											<button className="btn  btn_normal ml5 mr5" onClick={this.test}>
+											<button style={{fontSize:"19px"}} className="btn  btn_normal ml618 mr5 mt1 mb2" onClick={this.add} disabled={!this.state.bookname || !this.state.author||!this.state.totalcopies}>
                                        			 <i className="fa fa-plus"></i>  &nbsp;  &nbsp;&nbsp; &nbsp; &nbsp; Add
                                     		</button>
 											{/*<button onClick={Filters.hideModal}>Cancel</button> */}
 											
-											<button className="btn btndefaul">
+											<button  style={{fontSize:"19px"}} className="btn btndefaul ml25 mt1 mb2">
 												<i className="fas fa-times-circle mr-2"></i> &nbsp;Cancel
 											</button>
+
+											</div>
                                 
-										</div>
+										
 									</dialog>
 
 					</div>

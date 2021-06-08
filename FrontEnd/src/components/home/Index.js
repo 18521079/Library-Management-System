@@ -6,7 +6,6 @@ import './style.scss'
 export default class Home extends React.Component{
 
 	
-
 constructor(){
 		super();
 		this.state = {
@@ -36,7 +35,6 @@ fetch('https://stark-hamlet-65683.herokuapp.com/getissuereturn', {
       method: 'get',
       headers: {'Content-Type': 'application/json'}
   }).then(response=>response.json()).then(data=>{if(data)this.setState({fetched:true,bookList:data,issued:data.filter(function(x){return !x.return}).length})})
-
 
 
 
@@ -191,11 +189,11 @@ fetch('https://stark-hamlet-65683.herokuapp.com/countstudent', {
     <div className="card-body">
       <h4 className="small font-weight-bold">DATA COMMUNICATIONS AND NETWORKS <span className="float-right">20 ISSUED</span></h4>
       <div className="progress mb-4">
-        <div className="progress-bar bg-danger" role="progressbar" style={{"width":"20%", color:"#A8DEE0"}} aria-valuenow={20} aria-valuemin={0} aria-valuemax={100} />
+        <div className="progress-bar" role="progressbar" style={{"width":"20%", color:"#A8DEE0"}} aria-valuenow={20} aria-valuemin={0} aria-valuemax={100} />
       </div>
       <h4 className="small font-weight-bold">ADVANCED MATHEMATICS <span className="float-right">31 ISSUED</span></h4>
       <div className="progress mb-4">
-        <div className="progress-bar bg-warning" role="progressbar" style={{"width":"40%"}} aria-valuenow={40} aria-valuemin={0} aria-valuemax={100} />
+        <div className="progress-bar" role="progressbar" style={{"width":"40%"}} aria-valuenow={40} aria-valuemin={0} aria-valuemax={100} />
       </div>
       <h4 className="small font-weight-bold">NETWORKING <span className="float-right">49 ISSUED</span></h4>
       <div className="progress mb-4">
@@ -209,7 +207,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/countstudent', {
       <div className="progress mb-4">
         <div className="progress-bar bg-info" role="progressbar" style={{"width":"80%"}} aria-valuenow={80} aria-valuemin={0} aria-valuemax={100} />
       </div>
-     
+
     </div>
   </div>
 </div>
@@ -222,9 +220,26 @@ fetch('https://stark-hamlet-65683.herokuapp.com/countstudent', {
     </div>
     <div className="card-body">
       <div className="text-center">
-        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{"width":"25rem", height:'185px'}} src="assets/img/1.png" alt="..." />
+       {/* <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{"width":"25rem", height:'185px'}} src="assets/img/1.png" alt="..." /> */}
+
+       <div className="mid">
+              <video style={{"width":"150px", height:'45px'}} autoPlay muted loop>
+                <source className="embed-responsive" src="assets/img/book_video.mp4" type="video/mp4" />
+              </video>
+              <div class="color-overlay"></div>
+            </div>
+           <div className="carousel-caption">
+             <h5 className="display-2">Library</h5>
+             <h6>Welcome to online Library</h6>
+             <button type="button" className="btn btn-outline-light btn-sm">
+               SEE SERVICES
+             </button>
+             <button type="button" className="btn btn-primary btn-sm btnStarted">Learn more</button>
+           </div>
+
+
       </div>
-      <p>Library is an application that provides users with access to books from wherever they are. Being a virtual library, users can borrow and read their favorite books using any device.</p>
+      
     </div>
   </div>
 </div>
@@ -239,6 +254,8 @@ fetch('https://stark-hamlet-65683.herokuapp.com/countstudent', {
                         </div>
                       </div>
 			
+
+      
 			<List className="mb5" fetchBooks={this.fetchBooks} books={this.state.bookList} fetched={this.state.fetched} />
 			
       {/*test*/ }

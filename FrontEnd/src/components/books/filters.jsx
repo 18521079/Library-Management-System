@@ -11,7 +11,7 @@ export default class Filters extends React.Component {
 		this.state = {
 			bookList:[],
 			search:'',
-			date: new Date()
+			date: new Date(),
 			
 			
 
@@ -171,6 +171,8 @@ let wid='20vw';
 											<div style={{width:wid}}>
 												<label>Name *</label>
 												<input onChange={this.updateInfo} name="bookname" value={this.state.bookname}/>
+												
+												
 											</div>
 											<div style={{width:wid}}>
 												<label >ID</label>
@@ -218,7 +220,7 @@ let wid='20vw';
 												<input onChange={this.updateInfo} name="additionals" value={this.state.additionals}/>
 											</div>
 											
-										
+											
 											
 										</div>
 										<div className="dialogFooter" onClick={Filters.preventHide}>

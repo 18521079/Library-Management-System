@@ -13,11 +13,11 @@ const categoryRoute = require("./routes/category");
 
 dotenv.config();
 
-// mongoose.connect(process.env.MONGO_URL, 
-// {useNewUrlParser: true, useUnifiedTopology: true,useCreateIndex:true,useFindAndModify:false },
-// ()=>{
-//     console.log("Connect to MongoDB");
-// });
+mongoose.connect(process.env.MONGO_URL, 
+{useNewUrlParser: true, useUnifiedTopology: true,useCreateIndex:true,useFindAndModify:false },
+()=>{
+    console.log("Connect to MongoDB");
+});
 
 // middleware
 app.use(express.json());

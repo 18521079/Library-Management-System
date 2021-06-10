@@ -122,9 +122,9 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 						<td className="" style={{whiteSpace: 'pre-wrap'}}>{item.issue ? ((new Date(Date.parse(item.issue))).toDateString()+'\n'+(new Date(Date.parse(item.issue))).toLocaleTimeString() || '-') : '-'}</td>
 						<td className="">
 						<div className="row">
-								<Link to={"/book/"+item.bookid} draggable="false"  className="">&nbsp; &nbsp;&nbsp; &nbsp;<i style={{fontSize:"1.6em", color:'#1cc88a'}} class="fas fa-book"></i></Link>
+								<Link to={"/book/"+item.bookid} draggable="false"  className="">&nbsp; &nbsp;&nbsp; &nbsp;<i style={{color:"#87CEFA", fontSize:'1.4em'}} class="fas fa-book"></i></Link>
 								<br/>
-								<Link to={"/student/"+item.studentid} draggable="false"  className="">&nbsp; &nbsp; &nbsp;<i style={{fontSize:"1.6em", color:'#f6c23e'}} class="fas fa-user-graduate"></i></Link>
+								<Link to={"/student/"+item.studentid} draggable="false"  className="">&nbsp; &nbsp; &nbsp;<i style={{color:"#87CEFA", fontSize:'1.4em'}} class="fas fa-user-graduate"></i></Link>
 							</div>
 						</td>
 						<td>
@@ -196,7 +196,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 					</div>
 				</div>
 										<dialog style={{background:'#87CEFA'}}  id="returnBook" className="dialogBox" onClick={List.hideModal} style={{width:'50vw'}}>
-										<div style={{background:'#87CEFA'}} className="dialogTitle" onClick={List.preventHide}>
+										<div  className="dialogTitle" onClick={List.preventHide}>
 											Return Book
 											<button onClick={List.hideModal}>X</button>
 										</div>

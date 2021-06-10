@@ -33,6 +33,36 @@ return(
                         </div>
                       </div>
 
+					{/*<img style={{height:"300px", width:"280px"}} src="https://res.cloudinary.com/tech-stories/image/upload/v1565403761/Screen_Shot_2019-07-31_at_4.04.44_PM_yweslw.png"></img> */}
+
+					<div className="col-md-4 col-lg-4">
+                           {/* <div className="card_ card-info" style={{width: '18rem'}}>
+                                <img src={img} className="card-img-top" alt="..." />
+                                <div className="card-body">
+                                <h5 className="card-title">{headerTitle}</h5>
+                                <p className="card-text">{headerText}</p>
+                                <Link
+                                onClick={()=>value.handleDetail(id)}
+                                 to="/details" className="btn btn-outline-primary text-newbook">More Infor...</Link>
+                                </div>
+                            </div>
+                            */}
+
+<div className="profile-card" style={{width: '280px', height:"330px"}}>
+        <div className="profile-img">
+          <img style={{width:'280px !important', height:'330px'}}src="https://res.cloudinary.com/tech-stories/image/upload/v1565403761/Screen_Shot_2019-07-31_at_4.04.44_PM_yweslw.png" />
+        </div>
+        <div className="profile-content">
+          <h2 className="title">{book.name || '-'}
+            <span style={{color:"rgb(168, 173, 173)"}}> Author: {book.author || '-'} </span>
+			<span style={{color:"rgb(168, 173, 173)"}}>Publisher: {book.publisher || '-'}</span>
+			<span style={{color:"rgb(168, 173, 173)"}}>Type: {book.type || '-'}</span>
+			<span style={{color:"rgb(168, 173, 173)"}}>Prince Year: {book.printyear || '-'}</span>
+			
+          </h2>
+        </div>
+      </div>
+                        </div>
 
 								 
 							  <div className="blockBody custom">
@@ -73,14 +103,6 @@ return(
 										</div>
 									</div>
 								
-									<div className="infoDisplay">
-										<div className='row ml1'>
-											<label style={{fontSize:'20px', color:'#1E90FF'}}>Copyright Year</label>
-										</div>
-										<div className='row ml1'>
-											<label >{book.copyrightyear || '-'} </label>
-										</div>
-									</div>
 
 									<div className="infoDisplay">
 										
@@ -138,16 +160,7 @@ return(
 										</div>
 									</div>
 									
-									<div className="infoDisplay">
-										
-										<div className='row ml1'>
-											<label style={{fontSize:'20px', color:'#1E90FF'}}>Issued Books</label>
-										</div>
-										<div className='row ml1'>
-											<label >{(book.totalcopies-book.availablecopies )|| '-'} </label>
-										</div>
-
-							 		 </div>
+									
 				</div>
 																	
 														    

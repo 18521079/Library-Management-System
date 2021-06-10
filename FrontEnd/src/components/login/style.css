@@ -2,7 +2,7 @@
     position:fixed;
     top: 0;
     left: 0;
-    background: url("../common/images/loginBg.jpg") no-repeat center center fixed;
+    background: url("https://thesmartlocal.com/wp-content/uploads/2019/07/Book-Cafes-8-1.jpg") no-repeat center center fixed;
     background-size: cover !important;
     
     position: fixed;
@@ -77,14 +77,14 @@
     -o-transition:  border-bottom-color 0.2s ease-in-out;
 }
 .errorMsg{
-    color: #f36148;
+    color: #ffa091;
     height: 20px;
     margin-bottom: 20px;
     vertical-align: top;
     font-weight: 500;
 }
 .showError{
-    border-color: #f36148;
+    border-color: #ffa091;
 }
 #loginBtn {
     cursor: pointer;
@@ -467,3 +467,22 @@
         font-size: 14px;
     }
 }
+
+/*btn */
+.btn_normal{
+	color:#ffa091;
+	background-color: #dfdfdf;
+	border-color: #ffa091;
+	transition: all 1s;
+	-moz-transition: all 1s;
+	-webkit-transition: all 1s;
+
+}
+
+.btn_normal:hover{
+	transform:translate(3px,5px);
+	transform-origin: 100%;
+	background-color: #dfdfdf;
+	color: #ffa091;
+}
+

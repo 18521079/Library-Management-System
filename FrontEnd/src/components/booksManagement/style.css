@@ -3,6 +3,27 @@
     margin-left: 10px;
 }
 
+.ml618
+{
+    margin-left: 622px !important;
+}
+.mt1
+{
+    margin-top: 10px;
+}
+.mb2
+{
+    margin-bottom: 20px;
+}
+.ml25
+{
+    margin-left: 25px !important;
+}
+.dialogFooter
+{
+	background-color: white !important;
+}
+
 /*title section*/
 .btn_normal{
 	color:#3AE7E1 !important;

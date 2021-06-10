@@ -103,12 +103,12 @@ fetch('https://stark-hamlet-65683.herokuapp.com/countstudent', {
       <div className="card-body">
         <div className="row no-gutters align-items-center">
           <div className="col mr-2">
-            <div className="text-xs font-weight-bold text-primary text-uppercase mb-1">
+            <div className="text-xs font-weight-bold text-primary text-uppercase mb-1 getBook">
             Books</div>
             <div className="h5 mb-0 font-weight-bold text-gray-800">{this.state.total || 0}</div>
           </div>
           <div className="col-auto">
-            <i style={{color:'#6699FF'}} className="fas fa-book-open fa-2x text-gray-300" />
+            <i style={{color:'#bad7df'}} className="fas fa-book-open fa-2x text-gray-300" />
           </div>
         </div>
       </div>
@@ -120,12 +120,12 @@ fetch('https://stark-hamlet-65683.herokuapp.com/countstudent', {
       <div className="card-body">
         <div className="row no-gutters align-items-center">
           <div className="col mr-2">
-            <div className="text-xs font-weight-bold text-success text-uppercase mb-1">
+          <div className="text-xs font-weight-bold text-success text-uppercase mb-1 testcolor">
             Issued</div>
             <div className="h5 mb-0 font-weight-bold text-gray-800">{this.state.issued || 0}</div>
           </div>
           <div className="col-auto">
-            <i style={{color:'#1cc88a'}} className="far fa-id-card fa-2x text-gray-300" />
+            <i style={{color:'#99decc'}} className="far fa-id-card fa-2x text-gray-300" />
           </div>
         </div>
       </div>
@@ -163,12 +163,12 @@ fetch('https://stark-hamlet-65683.herokuapp.com/countstudent', {
       <div className="card-body">
         <div className="row no-gutters align-items-center">
           <div className="col mr-2">
-            <div className="text-xs font-weight-bold text-warning text-uppercase mb-1">
+            <div className="text-xs font-weight-bold text-warning text-uppercase mb-1 setpink">
             Students</div>
             <div className="h5 mb-0 font-weight-bold text-gray-800">18</div>
           </div>
           <div className="col-auto">
-            <i style={{color:'#f6c23e'}} className="fas fa-user-graduate fa-2x text-gray-300" />
+            <i style={{color:'#B0FEFE'}} className="fas fa-user-graduate fa-2x text-gray-300" />
           </div>
         </div>
       </div>
@@ -180,43 +180,146 @@ fetch('https://stark-hamlet-65683.herokuapp.com/countstudent', {
 {/* Content Row */}
 <div className="row">
  {/* Content Column */}
-<div className="col-lg-6 mb-4">
+<div className="col-lg-5 mb-4">
   {/* Project Card Example */}
   <div className="card shadow mb-4">
     <div className="card-header py-3">
-      <h6 className="m-0 font-weight-bold text-primary">Most popular</h6>
+      <h6 style={{color:"#3e8177"}}  className="m-0 font-weight-bold">Most popular</h6>
     </div>
-    <div className="card-body">
-      <h4 className="small font-weight-bold">DATA COMMUNICATIONS AND NETWORKS <span className="float-right">20 ISSUED</span></h4>
-      <div className="progress mb-4">
-        <div className="progress-bar" role="progressbar" style={{"width":"20%", color:"#A8DEE0"}} aria-valuenow={20} aria-valuemin={0} aria-valuemax={100} />
+    <div className="card-body  shadow1">
+
+
+      <div className="border-top ml3 mr3">
+  <div className="row mt1 mb2">
+    <div className="col-sm-4">
+      <div className="position-relative image-hover">
+        <img style={{width:"110px"}} src="https://imgv2-1-f.scribdassets.com/img/word_document/382519309/original/216x287/9ddf2cfb9c/1617225378?v=1" alt="news" className="img-fluid" />
+        <span className="thumb-title1">Programming</span>
       </div>
-      <h4 className="small font-weight-bold">ADVANCED MATHEMATICS <span className="float-right">31 ISSUED</span></h4>
-      <div className="progress mb-4">
-        <div className="progress-bar" role="progressbar" style={{"width":"40%"}} aria-valuenow={40} aria-valuemin={0} aria-valuemax={100} />
+    </div>
+    <div className="col-sm-8">
+      <div className="position-relative image-hover">
+        <h6 className="font-weight-600">
+          NODEJS By EMANUELE DELBOLO
+        </h6>
+        <p style={{fontSize:'17px', color:"#696969"}}className="fs-15">Publisher: 
+          DHANPAT RAI</p>
+          <p style={{color:"#008080"}}> Available Books:
+          25</p>
+          <spam style={{color:"#008080"}}>The number of Books
+          29</spam>
       </div>
-      <h4 className="small font-weight-bold">NETWORKING <span className="float-right">49 ISSUED</span></h4>
-      <div className="progress mb-4">
-        <div className="progress-bar" role="progressbar" style={{"width":"60%"}} aria-valuenow={60} aria-valuemin={0} aria-valuemax={100} />
+    </div>
+  </div>
+</div>
+
+<div className="border-top ml3 mr3">
+  <div className="row mt1 mb2">
+    <div className="col-sm-4">
+      <div className="position-relative image-hover">
+        <img style={{width:"110px"}} src="https://cv02.twirpx.net/3050/3050509.jpg?t=20200224072732" alt="news" className="img-fluid" />
+        <span className="thumb-title1">Programming</span>
       </div>
-      <h4 className="small font-weight-bold">ENGINEERING MATHEMATICS <span className="float-right">51 ISSUED</span></h4>
-      <div className="progress mb-4">
-        <div className="progress-bar bg-info" role="progressbar" style={{"width":"80%"}} aria-valuenow={80} aria-valuemin={0} aria-valuemax={100} />
+    </div>
+    <div className="col-sm-8">
+      <div className="position-relative image-hover">
+        <h6 className="font-weight-600">
+          NODEJS By EMANUELE DELBOLO
+        </h6>
+        <p style={{fontSize:'17px', color:"#696969"}}className="fs-15">Publisher: 
+          DHANPAT RAI</p>
+          <p style={{color:"#008080"}}> Available Books:
+          25</p>
+          <spam style={{color:"#008080"}}>The number of Books
+          29</spam>
       </div>
-      <h4 className="small font-weight-bold">OBJECT ORIENTED PROGRAMMING <span className="float-right">53 ISSUED</span></h4>
-      <div className="progress mb-4">
-        <div className="progress-bar bg-info" role="progressbar" style={{"width":"80%"}} aria-valuenow={80} aria-valuemin={0} aria-valuemax={100} />
+    </div>
+  </div>
+</div>
+
+<div className="border-top ml3 mr3">
+  <div className="row mt1 mb2">
+    <div className="col-sm-4">
+      <div className="position-relative image-hover">
+        <img style={{width:"110px"}} src="https://images-na.ssl-images-amazon.com/images/I/51GSWrIyQtL._SX258_BO1,204,203,200_.jpg" alt="news" className="img-fluid" />
+        <span className="thumb-title1">Programming</span>
       </div>
+    </div>
+    <div className="col-sm-8">
+      <div className="position-relative image-hover">
+        <h6 className="font-weight-600">
+          NODEJS By EMANUELE DELBOLO
+        </h6>
+        <p style={{fontSize:'17px', color:"#696969"}}className="fs-15">Publisher: 
+          DHANPAT RAI</p>
+          <p style={{color:"#008080"}}> Available Books:
+          25</p>
+          <spam style={{color:"#008080"}}>The number of Books
+          29</spam>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div className="border-top ml3 mr3">
+  <div className="row mt1 mb2">
+    <div className="col-sm-4">
+      <div className="position-relative image-hover">
+        <img style={{width:"110px"}} src="https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9780/1348/9780134843551.jpg" alt="news" className="img-fluid" />
+        <span className="thumb-title1">Programming</span>
+      </div>
+    </div>
+    <div className="col-sm-8">
+      <div className="position-relative image-hover">
+        <h6 className="font-weight-600">
+          NODEJS By EMANUELE DELBOLO
+        </h6>
+        <p style={{fontSize:'17px', color:"#696969"}}className="fs-15">Publisher: 
+          DHANPAT RAI</p>
+          <p style={{color:"#008080"}}> Available Books:
+          25</p>
+          <spam style={{color:"#008080"}}>The number of Books
+          29</spam>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div className="border-top ml3 mr3">
+  <div className="row mt1 mb2">
+    <div className="col-sm-4">
+      <div className="position-relative image-hover">
+        <img style={{width:"110px"}} src="https://m.media-amazon.com/images/I/418PwFaON0L.jpg" alt="news" className="img-fluid" />
+        <span className="thumb-title1">Programming</span>
+      </div>
+    </div>
+    <div className="col-sm-8">
+      <div className="position-relative image-hover">
+        <h6 className="font-weight-600">
+          NODEJS By EMANUELE DELBOLO
+        </h6>
+        <p style={{fontSize:'17px', color:"#696969"}}className="fs-15">Publisher: 
+          DHANPAT RAI</p>
+          <p style={{color:"#008080"}}> Available Books:
+          25</p>
+          <spam style={{color:"#008080"}}>The number of Books
+          29</spam>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     </div>
   </div>
 </div>
 
-<div className="col-lg-6 mb-4">
+<div className="col-lg-7 mb-4">
   {/* Illustrations */}
   <div className="card shadow mb-4">
     <div className="card-header py-3">
-      <h6 className="m-0 font-weight-bold text-primary">Library introduction</h6>
+      <h6 style={{color:"#3e8177"}} className="m-0 font-weight-bold">Library introduction</h6>
     </div>
     <div className="card-body">
       <div className="text-center">

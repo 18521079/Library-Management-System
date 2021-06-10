@@ -2,7 +2,6 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 
 import './style.css';
-import logoDark from '../common/images/logoDark.png';
 
 export default class LoginIndex extends React.Component{
     constructor(props) {
@@ -56,7 +55,6 @@ export default class LoginIndex extends React.Component{
 		        
 			       
 			        <div className="login_home">
-				        <img id="logo" src={logoDark} alt="IIIT Trichy" title="IIIT Trichy"style={{height:'60px'}}/>
 				        <div id="loginBox">
 					        <span style={{color:"#6fa894"}} id="loginTitle">Sign In</span>
 					        <form name="loginForm" onSubmit={this.handleSubmit}>

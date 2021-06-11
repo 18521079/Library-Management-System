@@ -68,7 +68,7 @@ export default class List extends React.Component {
 
   returnBook=()=>{
   	let {bookid,studentid}=this.state;
-  	let fine=this.state.fine>0?this.state.fine:'Nill';
+  	let fine=this.state.fine>0?this.state.fine:'0';
 
 fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
       method: 'post',
@@ -228,7 +228,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 														</div>
 														<div style={{width:wid}}>
 															<label className={this.state.fine>0?"redtxt":""}>Fine Amount</label>
-															<input name="Fine" placeholder="Fine" className="bold" value={this.state.fine>0?' '+this.state.fine+'.00':'Nill'}/>
+															<input name="Fine" placeholder="Fine" className="bold" value={this.state.fine>0?' '+this.state.fine+'.00':'0'}/>
 														</div>
 														
 														

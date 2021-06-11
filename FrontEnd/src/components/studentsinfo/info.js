@@ -24,20 +24,76 @@ return(
 
 <div className="thisBlock halfBlock">
 
-						<div className="blockTitle">
-								Student Info
-		                    
-						</div>
+
+						<div className="row">
+                        <div className="col-lg-3 ml130 mt70">
+                          <div className="d-flex position-relative float-left">
+                            <h1 className="section-title-info">Student Info</h1>
+                          </div>
+                        </div>
+                      </div>
 
 
 								 
 							  <div className="blockBody custom">
-									<div className="infoDisplay"><label>Name</label><label>{student.name || '-'}</label></div>
-									<div className="infoDisplay"><label>ID Student</label><label>{student.roll || '-'}</label></div>
-									<div className="infoDisplay"><label>Phone</label><label>{student.phone || '-'}</label></div>
-									<div className="infoDisplay"><label>Year</label><label>{student.year || '-'}</label></div>
-									<div className="infoDisplay"><label>Class</label><label>{student.branch || '-'}</label></div>
-									<div className="infoDisplay"><label>No. Of Borrowed Books</label><label>{student.issued || '-'}</label></div>
+
+							  <div className="infoDisplay">
+										<div className='row ml1'>
+											<label style={{fontSize:'20px', color:'#1E90FF'}}>Name</label>
+										</div>
+										<div className='row ml1'>
+											<label > {student.name || '-'}</label>
+										</div>
+								</div>
+
+								<div className="infoDisplay">
+										<div className='row ml1'>
+											<label style={{fontSize:'20px', color:'#1E90FF'}}>ID Student</label>
+										</div>
+										<div className='row ml1'>
+											<label >{student.roll || '-'}</label>
+										</div>
+								</div>
+
+								<div className="infoDisplay">
+										<div className='row ml1'>
+											<label style={{fontSize:'20px', color:'#1E90FF'}}>Phone</label>
+										</div>
+										<div className='row ml1'>
+											<label >{student.phone || '-'}</label>
+										</div>
+								</div>
+
+								<div className="infoDisplay">
+										<div className='row ml1'>
+											<label style={{fontSize:'20px', color:'#1E90FF'}}>Date of birth</label>
+										</div>
+										<div className='row ml1'>
+											<label >24/4/{student.year || '-'}</label>
+										</div>
+								</div>
+
+								<div className="infoDisplay">
+										<div className='row ml1'>
+											<label style={{fontSize:'20px', color:'#1E90FF'}}>Class</label>
+										</div>
+										<div className='row ml1'>
+											<label >{student.branch || '-'}</label>
+										</div>
+								</div>
+
+								<div className="infoDisplay">
+										<div className='row ml1'>
+											<label style={{fontSize:'20px', color:'#1E90FF'}}>No. Of Borrowed</label>
+										</div>
+										<div className='row ml1'>
+											<label >{student.issued || '-'}</label>
+										</div>
+								</div>
+
+
+
+									
 								
 								
 

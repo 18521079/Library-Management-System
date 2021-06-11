@@ -41,13 +41,12 @@ render(){
 				return(
 					<tr key={item.id} className="tableRow"style={{fontSize:'0.9em'}}>
 						<td className="">{book.name ? (book.name|| '-') : '-'}</td>
-						<td className="">{book.isbn ? (book.isbn|| '-') : '-'}</td>
+					
 						<td className="">{book.author ? (book.author || '-') : '-'}</td>
-						<td className="">{book.edition ? (book.edition || '-') : '-'}</td>
 						
 						<td className="" style={{whiteSpace: 'pre-wrap'}}>{item.issue ? ((new Date(Date.parse(item.issue))).toDateString()+'\n'+(new Date(Date.parse(item.issue))).toLocaleTimeString() || '-') : '-'}</td>
 						<td className="" style={{whiteSpace: 'pre-wrap'}}>{item.return ? ((new Date(Date.parse(item.return))).toDateString()+'\n'+(new Date(Date.parse(item.return))).toLocaleTimeString() || '-') : '-'}</td>
-						<td className={!(item.fine=="Nill")?"redtxt":null}>{item.fine ? (item.fine || '-') : '-'}</td>
+						<td className={!(item.fine=="0")?"redtxt":null}>{item.fine ? (item.fine || '-') : '-'}</td>
 						
 					</tr>
 				)
@@ -66,9 +65,9 @@ render(){
 				return(
 					<tr key={item.id} className="tableRow"style={{fontSize:'0.9em'}}>
 						<td className="">{book.name ? (book.name|| '-') : '-'}</td>
-						<td className="">{book.isbn ? (book.isbn|| '-') : '-'}</td>
+						<td className="">{book.isbn ? (book.publisher|| '-') : '-'}</td>
 						<td className="">{book.author ? (book.author || '-') : '-'}</td>
-						<td className="">{book.edition ? (book.edition || '-') : '-'}</td>
+						
 						
 						<td className="" style={{whiteSpace: 'pre-wrap'}}>{item.issue ? ((new Date(Date.parse(item.issue))).toDateString()+'\n'+(new Date(Date.parse(item.issue))).toLocaleTimeString() || '-') : '-'}</td>
 						
@@ -93,8 +92,14 @@ render(){
 
 		return(
 		<div className="thisBlock halfBlock">
+			<div className="row">
+                        <div className="col-lg-3 ml130 mt70">
+                          <div className="d-flex position-relative float-left">
+                            <h1 className="section-title-transaction-history">Currently Borrowed</h1>
+                          </div>
+                        </div>
+            </div>
 
-			<div className="blockTitle" style={{fontSize:'1.3vw'}}>Currently Issued</div>
 			<div className="pageRow" id="booksBlock" style={{}}>
 				<div className="thisBlock">
 					<div className="blockBody">
@@ -103,18 +108,18 @@ render(){
 								<table>
 									<thead>
 									<tr>
-										<th className="">Name</th>
-										<th className="">ISBN</th>
-										<th className="">Author</th>
-										<th className="">Edition</th>
-										<th className="">Issued</th>
+										<th style={{color:"white", height:"50px", fontSize:"18px"}} className="">Name</th>
+										<th style={{color:"white", height:"50px", fontSize:"18px"}} className="">Publisher</th>
+										<th style={{color:"white", height:"50px", fontSize:"18px"}} className="">Author</th>
+									
+										<th style={{color:"white", height:"50px", fontSize:"18px"}} className="">Borrowed</th>
 										
 									</tr>
 									</thead>
 								</table>
 							</div>
 							<div className="tbl-content">
-								<table>
+								<table style={{fontSize:"17px"}}>
 									<tbody>
 										{itemListi}
 									</tbody>
@@ -127,7 +132,14 @@ render(){
 			</div>
 			<div style={{height:'2px',background:'#d4d4d5'}}></div>
 
-				<div className="blockTitle" style={{fontSize:'1.3vw'}}>Transaction History</div>
+				<div className="row">
+                        <div className="col-lg-3 ml130 mt70">
+                          <div className="d-flex position-relative float-left">
+                            <h1 className="section-title-transaction-history">Transaction History</h1>
+                          </div>
+                        </div>
+                      </div>
+
 				<div className="pageRow" id="booksBlock" >
 				<div className="thisBlock">
 					<div className="blockBody" >
@@ -136,20 +148,20 @@ render(){
 								<table>
 									<thead>
 									<tr>
-										<th className="">Name</th>
-										<th className="">ISBN</th>
-										<th className="">Author</th>
-										<th className="">Edition</th>
-										<th className="">Issued</th>
-										<th className="">Return</th>
-										<th className="">Fine</th>
+										<th style={{color:"white", height:"50px", fontSize:"18px"}} className="">Name</th>
+										
+										<th style={{color:"white", height:"50px", fontSize:"18px"}} className="">Author</th>
+									
+										<th style={{color:"white", height:"50px", fontSize:"18px"}} className="">Borrowed</th>
+										<th style={{color:"white", height:"50px", fontSize:"18px"}} className="">Return</th>
+										<th style={{color:"white", height:"50px", fontSize:"18px"}} className="">Fine</th>
 									</tr>
 									</thead>
 								</table>
 							</div>
 							<div className="tbl-content">
 								<table>
-									<tbody>
+									<tbody style={{fontSize:"17px"}}>
 										{itemListr}
 									</tbody>
 								</table>

@@ -177,7 +177,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookissue', {
 										<th style ={{color:'white'}} className="">Author</th>
 									
 										<th style ={{color:'white'}} className="">Publisher</th>
-										<th style ={{color:'white'}} className="">Quantity</th>
+										<th style ={{color:'white'}} className="">Available</th>
 										
 										<th style ={{color:'white'}} className=" ">Action</th>
 									</tr>

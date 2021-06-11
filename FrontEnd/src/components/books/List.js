@@ -131,10 +131,10 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookissue', {
 						{item.availablecopies? 
 
 						<a style={{marginLeft:'4px'}} onClick={()=>{this.setState({bookid:item.id,bookname:item.name,author:item.author,publisher:item.publisher,edition:item.edition,isbn:item.isbn},List.showModal())}}><button className="btn  btn_normal mr5 mb3 mt3" >
-						<i class="far fa-id-card"></i> &nbsp; &nbsp; Issue
+						<i class="far fa-id-card"></i> &nbsp; &nbsp; Borrow
                                 </button></a>
 					     :
-					     <a style={{cursor:'not-allowed',opacity:'0.6',marginLeft:'4px'}}>Issue</a>
+					     <a style={{cursor:'not-allowed',opacity:'0.6',marginLeft:'4px'}}>Borrow</a>
 					     }
 
 						</td>
@@ -178,7 +178,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookissue', {
 										<th style ={{color:'white'}} className="">Author</th>
 									
 										<th style ={{color:'white'}} className="">Publisher</th>
-										<th style ={{color:'white'}} className="">Quantity</th>
+										<th style ={{color:'white'}} className="">Available</th>
 										
 										<th style ={{color:'white'}} className=" ">Action</th>
 									</tr>
@@ -196,50 +196,75 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookissue', {
 					</div>
 				</div>
 										<dialog id="issueBook" className="dialogBox" onClick={List.hideModal} style={{width:'50vw'}}>
-										<div className="dialogTitle" onClick={List.preventHide}>
-											Issue Book
+										<div style={{background:'#282829'}} className="dialogTitle" onClick={List.preventHide}>
+										Borrow Book
 											<button onClick={List.hideModal}>X</button>
 										</div>
 										{!this.state.found||!this.state.search?
-										<div className="dialogBody" onClick={List.preventHide} >
+										<div style={{background:'white'}} className="dialogBody" onClick={List.preventHide} >
 
 											<div style={{width:wid}}>
 												<label>Search Student</label>
-												<input onChange={this.searchstudent} name="search" placeholder="Search by Roll or Name" value={this.state.search}/>
+
+												<div className="form-outline">
+												<input className="form-control"  type="text" id="form1" onChange={this.searchstudent} name="search" placeholder="Search by ID or Name" value={this.state.search}/>
+												</div>
+
 											</div>
 										</div>
 												:
 
-												<div className="dialogBody" onClick={List.preventHide} >
+												<div style={{background:'white'}} className="dialogBody" onClick={List.preventHide} >
 
 														<div style={{width:wid}}>
 															<label>Search Student</label>
-															<input onChange={this.searchstudent} name="search" placeholder="Search by Roll or Name" value={this.state.search}/>
+
+															<div className="form-outline">
+															<input className="form-control" onChange={this.searchstudent} name="search" placeholder="Search by ID or Name" value={this.state.search}/>
+															</div>
+
 														</div>
 														<div style={{width:wid}}>
 															<label>Name</label>
-															<input  name="search" placeholder="Name" value={this.state.name}/>
+															
+															<div className="form-outline">
+															<input className="form-control" name="search" placeholder="Name" value={this.state.name}/>
+															</div>
+															
 														</div>
 														<div style={{width:wid}}>
-															<label>Roll</label>
-															<input name="Roll" placeholder="Roll" value={this.state.roll}/>
+															<label>ID Student</label>
+															
+															<div className="form-outline">
+															<input className="form-control" name="Roll" placeholder="Roll" value={this.state.roll}/>
+															</div>
+
 														</div>
-														<div style={{width:wid}}>
-															<label>Year</label>
-															<input  name="Year" placeholder="Year" value={this.state.year}/>
-														</div>
+														
 														<div style={{width:wid}}>
 															<label>Phone</label>
-															<input  name="Phone" placeholder="Phone" value={this.state.phone}/>
-														</div>
-														<div style={{width:wid}}>
-															<label>Issued Books</label>
-															<input  name="issued" placeholder="None" value={this.state.issued}/>
+
+															<div className="form-outline">
+															<input className="form-control" name="Phone" placeholder="Phone" value={this.state.phone}/>
+															</div>
+
 														</div>
 
 														<div style={{width:wid}}>
-															<label>Recommended To Return By :</label>
-															<input  name="recommend" placeholder="None" value={new Date((new Date()).getTime() + 14*24*60*60*1000).toDateString()}/>
+															<label>Borrow Books</label>
+															
+															<div className="form-outline">
+															<input className="form-control" name="issued" placeholder="None" value={this.state.issued}/>
+															</div>
+
+														</div>
+
+														<div style={{width:wid}}>
+														  
+															<label style={{color:"#3e8177"}} ><i class="far fa-calendar-alt"></i> Recommended To Return By :</label>
+															<div className="form-outline">
+															<input className="form-control" name="recommend" placeholder="None" value={new Date((new Date()).getTime() + 90*24*60*60*1000).toDateString()}/>
+															</div>
 														</div>
 
 											  </div>
@@ -251,8 +276,8 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookissue', {
 											
 										
 										<div className="dialogFooter" onClick={List.preventHide}>
-											<button onClick={this.issue} disabled={!this.state.found||!this.state.search||(this.state.issued>=3)}>Issue</button>
-											<button onClick={List.hideModal}>Cancel</button>
+											<button className="btn btndefaul" onClick={this.issue} disabled={!this.state.found||!this.state.search||(this.state.issued>=3)}> Borrow</button>
+											<button className="btn  btn_normal" onClick={List.hideModal}>  <i className="fas fa-times-circle"></i>&nbsp;Cancel</button>
 										</div>
 									</dialog>
                

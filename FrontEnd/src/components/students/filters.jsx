@@ -107,7 +107,7 @@ let wid='15vw';
 								</div>
 
 								{/*this is search*/}	
-								<div className="input-group rounded col ml3">
+								<div className="input-group rounded col ml6">
 									<input value={this.state.searchStudent} type="search" className="form-control rounded" placeholder="Search by Name,ID,class,year" autoComplete="off" name="search" onChange={this.updateInfo}  aria-label="Search"
 										aria-describedby="search-addon" />
 								

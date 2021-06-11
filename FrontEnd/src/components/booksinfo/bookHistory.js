@@ -47,9 +47,6 @@ render(){
 
 						</td>
 						<td className="">{student.roll ? (student.roll|| '-') : '-'}</td>
-						<td className="">{student.year ? (student.year || '-') : '-'}</td>
-						
-						
 						<td className="" style={{whiteSpace: 'pre-wrap'}}>{item.issue ? ((new Date(Date.parse(item.issue))).toDateString()+'\n'+(new Date(Date.parse(item.issue))).toLocaleTimeString() || '-') : '-'}</td>
 						<td className="" style={{whiteSpace: 'pre-wrap'}}>{item.return ? ((new Date(Date.parse(item.return))).toDateString()+'\n'+(new Date(Date.parse(item.return))).toLocaleTimeString() || '-') : '-'}</td>
 						<td className={!(item.fine=="0")?"redtxt":null}>{item.fine ? (item.fine || '-') : '-'}</td>
@@ -104,7 +101,7 @@ render(){
 			<div className="row ml1">
                         <div className="col-lg-3 ml130 mt70">
                           <div className="d-flex position-relative float-left">
-                            <h1 className="section-title-2">Currently Issued</h1>
+                            <h1 className="section-title-2">Currently Borrowed</h1>
                           </div>
                         </div>
             </div>
@@ -120,7 +117,7 @@ render(){
 										<th style ={{color:'white'}} className="heigh-th">Name</th>
 										<th style ={{color:'white'}} className="heigh-th">ID</th>
 										<th style ={{color:'white'}} className="heigh-th">Year</th>
-										<th style ={{color:'white'}} className="heigh-th">Issued</th>
+										<th style ={{color:'white'}} className="heigh-th">Borrowed</th>
 										
 									</tr>
 									</thead>
@@ -158,8 +155,7 @@ render(){
 									<tr>
 										<th style ={{color:'white'}} className="heigh-th">Name</th>
 										<th style ={{color:'white'}} className="heigh-th">ID</th>
-										<th style ={{color:'white'}} className="heigh-th">Year</th>
-										<th style ={{color:'white'}} className="heigh-th">Issued</th>
+										<th style ={{color:'white'}} className="heigh-th">Borrowed</th>
 										<th style ={{color:'white'}} className="heigh-th">Return</th>
 										<th style ={{color:'white'}} className="heigh-th">Fine</th>
 									</tr>

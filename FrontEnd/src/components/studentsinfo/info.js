@@ -37,8 +37,8 @@ return(
 									<div className="infoDisplay"><label>Phone</label><label>{student.phone || '-'}</label></div>
 									<div className="infoDisplay"><label>Year</label><label>{student.year || '-'}</label></div>
 									<div className="infoDisplay"><label>Class</label><label>{student.branch || '-'}</label></div>
-									<div className="infoDisplay"><label>No. Of Issued Books</label><label>{student.issued || '-'}</label></div>
-									<div className="infoDisplay"><label>Student UID</label><label>{student.id || '-'}</label></div>
+									<div className="infoDisplay"><label>No. Of Borrowed Books</label><label>{student.issued || '-'}</label></div>
+								
 								
 
 							  </div>

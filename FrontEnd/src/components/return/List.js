@@ -66,7 +66,7 @@ export default class List extends React.Component {
 
   returnBook=()=>{
   	let {bookid,studentid}=this.state;
-  	let fine=this.state.fine>0?this.state.fine:'Nill';
+  	let fine=this.state.fine>0?this.state.fine:'0';
 fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},

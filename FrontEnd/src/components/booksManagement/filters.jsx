@@ -152,7 +152,7 @@ let wid='20vw';
 
 								{/*this is search*/}	
 								<div className="input-group rounded col">
-									<input value={this.state.searchDevice}  type="search" className="form-control rounded" placeholder="Search by Book Info Or Student Info" autoComplete="off" name="search" onChange={this.updateInfo}  aria-label="Search"
+									<input value={this.state.searchDevice}  type="search" className="form-control rounded" placeholder="Search by Book Info" autoComplete="off" name="search" onChange={this.updateInfo}  aria-label="Search"
 										aria-describedby="search-addon" />
 								
 										<i style={{fontSize:'1.5em'}} className="fas fa-search"></i>
@@ -180,6 +180,14 @@ let wid='20vw';
 											</div>
 											
 											<div style={{width:wid}}>
+												<label >Image</label>
+												<label htmlFor="file" className="shareOption">
+													 <input  id="file" class="form-control" type="file" id="formFileMultiple"  accept=".png,.jpeg,.jpg" multiple />
+													
+												</label>
+											</div>
+
+											<div style={{width:wid}}>
 												<label>Name *</label>
 											{/*	<div className="form-outline">
 												<input onChange={this.updateInfo} name="bookname" value={this.state.bookname} type="text" id="form1" className="form-control"/>
@@ -196,6 +204,7 @@ let wid='20vw';
 									
 									
 											</div>
+
 											<div style={{width:wid}}>
 												<label >ID</label>
 
@@ -204,6 +213,8 @@ let wid='20vw';
 												</div>
 
 											</div>
+
+
 											<div style={{width:wid}}>
 												<label>Author *</label>
 
@@ -243,14 +254,6 @@ let wid='20vw';
 										<option value={6}>Kodansha</option>
                                       </select>
 									</div>
-
-											</div>
-											<div style={{width:wid}}>
-												<label>Copyright Year</label>
-
-												<div className="form-outline">
-												<input onChange={this.updateInfo} name="copyrightyear" value={this.state.copyrightyear} type="text" id="form1" className="form-control"/>
-												</div>
 
 											</div>
 											

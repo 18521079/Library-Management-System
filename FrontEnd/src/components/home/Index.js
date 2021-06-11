@@ -190,7 +190,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/countstudent', {
 
 
       <div className="border-top ml3 mr3">
-  <div className="row mt1 mb2">
+  <div className="row mt1 mb1">
     <div className="col-sm-4">
       <div className="position-relative image-hover">
         <img style={{width:"110px"}} src="https://imgv2-1-f.scribdassets.com/img/word_document/382519309/original/216x287/9ddf2cfb9c/1617225378?v=1" alt="news" className="img-fluid" />
@@ -214,7 +214,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/countstudent', {
 </div>
 
 <div className="border-top ml3 mr3">
-  <div className="row mt1 mb2">
+  <div className="row mt1 mb1">
     <div className="col-sm-4">
       <div className="position-relative image-hover">
         <img style={{width:"110px"}} src="https://cv02.twirpx.net/3050/3050509.jpg?t=20200224072732" alt="news" className="img-fluid" />
@@ -238,7 +238,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/countstudent', {
 </div>
 
 <div className="border-top ml3 mr3">
-  <div className="row mt1 mb2">
+  <div className="row mt1 mb1">
     <div className="col-sm-4">
       <div className="position-relative image-hover">
         <img style={{width:"110px"}} src="https://images-na.ssl-images-amazon.com/images/I/51GSWrIyQtL._SX258_BO1,204,203,200_.jpg" alt="news" className="img-fluid" />
@@ -262,7 +262,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/countstudent', {
 </div>
 
 <div className="border-top ml3 mr3">
-  <div className="row mt1 mb2">
+  <div className="row mt1 mb1">
     <div className="col-sm-4">
       <div className="position-relative image-hover">
         <img style={{width:"110px"}} src="https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9780/1348/9780134843551.jpg" alt="news" className="img-fluid" />
@@ -287,7 +287,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/countstudent', {
 
 
 <div className="border-top ml3 mr3">
-  <div className="row mt1 mb2">
+  <div className="row mt1 mb1">
     <div className="col-sm-4">
       <div className="position-relative image-hover">
         <img style={{width:"110px"}} src="https://m.media-amazon.com/images/I/418PwFaON0L.jpg" alt="news" className="img-fluid" />
@@ -352,7 +352,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/countstudent', {
       <div className="row">
                         <div className="col-lg-3 ml130 mt70">
                           <div className="d-flex position-relative float-left">
-                            <h1 className="section-title">Currently Issued Books</h1>
+                            <h1 className="section-title">Currently Borrowed Books</h1>
                           </div>
                         </div>
                       </div>

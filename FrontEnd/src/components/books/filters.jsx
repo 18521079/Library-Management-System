@@ -171,13 +171,13 @@ let wid='20vw';
 											<div style={{width:wid}}>
 												<label>Name *</label>
 												<input onChange={this.updateInfo} name="bookname" value={this.state.bookname}/>
-												
-												
 											</div>
+
 											<div style={{width:wid}}>
 												<label >ID</label>
 												<input onChange={this.updateInfo} name="isbn" value={this.state.isbn}/>
 											</div>
+
 											<div style={{width:wid}}>
 												<label>Author *</label>
 												<input onChange={this.updateInfo} name="author" value={this.state.author}/>

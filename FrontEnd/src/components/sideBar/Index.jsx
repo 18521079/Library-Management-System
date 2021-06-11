@@ -102,7 +102,7 @@ export default class SideBar extends React.Component{
       <li className="list-item">
 	  
         <i className="list-item-icon fas fa-stream" />
-        <span className="list-item-text">Issue</span>
+        <span className="list-item-text">Borrow</span>
 		
       </li>
 	  </Link>

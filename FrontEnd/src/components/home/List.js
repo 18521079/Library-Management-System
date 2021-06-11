@@ -178,7 +178,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 										<th className="">Publisher</th>
 										<th className="">Student</th>
 										<th className="">ID Student </th>
-										<th className="">Issued</th>
+										<th className="">Date Added</th>
 										<th className=" ">Info</th>
 										<th className=" ">Action</th>
 									</tr>

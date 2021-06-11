@@ -900,11 +900,10 @@ body{
 }
 .dialogBox > .dialogFooter{
     height: 70px;
-    background-color: #f2f3f4;
+   /* background-color: #f2f3f4; */
     padding: 0 34px;
 }
 .dialogBox > .dialogFooter > button{
-    border: none;
     outline: none;
     float: right;
     width: 100px;
@@ -917,7 +916,7 @@ body{
     cursor: pointer;
 }
 .dialogBox > .dialogFooter > button:disabled{
-    background-color: #c8c9cb !important;
+    background-color: #c8c9cb ;
     cursor: not-allowed;
 }
 .dialogBox > .dialogFooter > button:last-child{

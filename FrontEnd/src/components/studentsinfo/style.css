@@ -1,3 +1,7 @@
+.updateHeight
+{
+    height:60px !important;
+}
 .pageView > .pageRow.custom{
     padding-top: 0;
 }

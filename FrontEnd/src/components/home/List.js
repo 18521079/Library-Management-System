@@ -120,12 +120,12 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 						
 						<td className="">{item.studentname ? (item.studentname || '-') : '-'}</td>
 						<td className="">{item.roll ? (item.roll || '-') : '-'}</td>
-						<td className="" style={{whiteSpace: 'pre-wrap'}}>{item.issue ? ((new Date(Date.parse(item.issue))).toDateString()+'\n'+(new Date(Date.parse(item.issue))).toLocaleTimeString() || '-') : '-'}</td>
+						
 						<td className="">
 							<div className="row">
-								<Link to={"/book/"+item.bookid} draggable="false"  className="">&nbsp; &nbsp;&nbsp; &nbsp;<i style={{color:"#87CEFA", fontSize:'1.4em'}}  class="fas fa-book"></i></Link>
+								<Link style={{textDecoration:"none"}} to={"/book/"+item.bookid} draggable="false"  className="">&nbsp; &nbsp;&nbsp; &nbsp;<i style={{color:"#87CEFA", fontSize:'1.4em'}}  class="fas fa-book"></i></Link>
 								<br/>
-								<Link to={"/student/"+item.studentid} draggable="false"  className="">&nbsp; &nbsp; &nbsp;<i style={{color:"#87CEFA", fontSize:'1.4em'}} class="fas fa-user-graduate"></i></Link>
+								<Link style={{textDecoration:"none"}} to={"/student/"+item.studentid} draggable="false"  className="">&nbsp; &nbsp; &nbsp;<i style={{color:"#87CEFA", fontSize:'1.4em'}} class="fas fa-user-graduate"></i></Link>
 							</div>
 						</td>
 						<td>
@@ -178,7 +178,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 										<th className="">Publisher</th>
 										<th className="">Student</th>
 										<th className="">ID Student </th>
-										<th className="">Date Added</th>
+										
 										<th className=" ">Info</th>
 										<th className=" ">Action</th>
 									</tr>

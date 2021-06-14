@@ -119,12 +119,12 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 						
 						<td className="">{item.studentname ? (item.studentname || '-') : '-'}</td>
 						<td className="">{item.roll ? (item.roll || '-') : '-'}</td>
-						<td className="" style={{whiteSpace: 'pre-wrap'}}>{item.issue ? ((new Date(Date.parse(item.issue))).toDateString()+'\n'+(new Date(Date.parse(item.issue))).toLocaleTimeString() || '-') : '-'}</td>
+						
 						<td className="">
-						<div className="row">
-								<Link to={"/book/"+item.bookid} draggable="false"  className="">&nbsp; &nbsp;&nbsp; &nbsp;<i style={{color:"#87CEFA", fontSize:'1.4em'}} class="fas fa-book"></i></Link>
+						<div className="row rowstyle">
+								<Link style={{textDecoration:"none"}} to={"/book/"+item.bookid} draggable="false"  className="">&nbsp; &nbsp;&nbsp; &nbsp;<i style={{color:"#87CEFA", fontSize:'1.4em'}} class="fas fa-book"></i></Link>
 								<br/>
-								<Link to={"/student/"+item.studentid} draggable="false"  className="">&nbsp; &nbsp; &nbsp;<i style={{color:"#87CEFA", fontSize:'1.4em'}} class="fas fa-user-graduate"></i></Link>
+								<Link style={{textDecoration:"none"}} to={"/student/"+item.studentid} draggable="false"  className="">&nbsp; &nbsp; &nbsp;<i style={{color:"#87CEFA", fontSize:'1.4em'}} class="fas fa-user-graduate"></i></Link>
 							</div>
 						</td>
 						<td>
@@ -171,14 +171,14 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 								<table >
 								<thead className="thead-dark">
 									<tr>
-										<th style ={{color:'white'}}className="mt1">  Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+										<th style ={{color:'white', height:"60px"}}className="mt1">  Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
 										<th style ={{color:'white'}} className="">ID Books</th>
 										<th style ={{color:'white'}} className="">Author</th>
 									
 										<th style ={{color:'white'}} className="">Publisher</th>
 										<th style ={{color:'white'}} className="">Student</th>
 										<th style ={{color:'white'}} className="">ID student</th>
-										<th style ={{color:'white'}} className="">Issued</th>
+										
 										<th style ={{color:'white'}} className=" ">Info</th>
 										<th style ={{color:'white'}} className=" ">Action</th>
 									</tr>
@@ -195,41 +195,56 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 						</div>
 					</div>
 				</div>
-										<dialog style={{background:'#87CEFA'}}  id="returnBook" className="dialogBox" onClick={List.hideModal} style={{width:'50vw'}}>
-										<div  className="dialogTitle" onClick={List.preventHide}>
+										<dialog   id="returnBook" className="dialogBox" onClick={List.hideModal} style={{width:'50vw'}}>
+										<div style={{background:'#282829'}} className="dialogTitle" onClick={List.preventHide}>
 											Return Book
 											<button onClick={List.hideModal}>X</button>
 										</div>
 										
 
-												<div   className="dialogBody" onClick={List.preventHide} >
+												<div  style={{background:'white'}} className="dialogBody" onClick={List.preventHide} >
 
 														
 														<div style={{width:wid}}>
 															<label>Book Name</label>
-															<input  name="search" placeholder="Name" value={this.state.bookname}/>
+															<div className="form-outline">
+															<input className="form-control" name="search" placeholder="Name" value={this.state.bookname}/>
+															</div>
 														</div>
+
+														
+
 														<div style={{width:wid}}>
 															<label>Author</label>
-															<input  name="search" placeholder="Name" value={this.state.author}/>
+															<div className="form-outline">
+															<input className="form-control"  name="search" placeholder="Name" value={this.state.author}/>
+															</div>
 														</div>
 														<div style={{width:wid}}>
 															<label>Publisher</label>
-															<input  name="search" placeholder="Name" value={this.state.publisher}/>
+															<div className="form-outline">
+																<input className="form-control" name="search" placeholder="Name" value={this.state.publisher}/>
+															</div>
 														</div>
 														
 														<div style={{width:wid}}>
 															<label>Student Name</label>
-															<input  name="Year" placeholder="Year" value={this.state.studentname}/>
+															<div className="form-outline">
+																<input className="form-control" name="Year" placeholder="Year" value={this.state.studentname}/>
+															</div>
 														</div>
 														<div style={{width:wid}}>
 															<label> ID Student</label>
-															<input name="Roll" placeholder="Roll" value={this.state.roll}/>
+															<div className="form-outline">
+															   <input className="form-control" name="Roll" placeholder="Roll" value={this.state.roll}/>
+															</div>
 														</div>
 
 														<div style={{width:wid}}>
 															<label className={this.state.fine>0?"redtxt":""}>Fine Amount</label>
-															<input name="Fine" placeholder="Fine" className="bold" value={this.state.fine>0?' '+this.state.fine+'.00':'0'}/>
+															<div className="form-outline">
+																<input className="form-control bold" name="Fine" placeholder="Fine" value={this.state.fine>0?' '+this.state.fine+'.00':'0'}/>
+															</div>
 														</div>
 														
 														
@@ -243,8 +258,8 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 											
 										
 										<div className="dialogFooter" onClick={List.preventHide}>
-											<button onClick={this.returnBook} >Return</button>
-											<button onClick={List.hideModal}>Cancel</button>
+											<button className="btn btndefaul" onClick={this.returnBook} >Return</button>
+											<button className="btn  btn_normal" onClick={List.hideModal}>Cancel</button>
 										</div>
 									</dialog>
                

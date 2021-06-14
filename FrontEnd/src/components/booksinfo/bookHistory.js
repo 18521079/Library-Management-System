@@ -41,7 +41,7 @@ render(){
 
 				const none=<div style={{"marginLeft":'20px'}}>-</div>
 				return(
-					<tr key={item.id} className="tableRow"style={{fontSize:'0.9em'}}>
+					<tr key={item.id} className="tableRow"style={{fontSize:'1.0em'}}>
 						<td className="">
 						<Link to={"/student/"+student.id} draggable="false"  className="">{student.name}</Link>
 
@@ -49,7 +49,8 @@ render(){
 						<td className="">{student.roll ? (student.roll|| '-') : '-'}</td>
 						<td className="" style={{whiteSpace: 'pre-wrap'}}>{item.issue ? ((new Date(Date.parse(item.issue))).toDateString()+'\n'+(new Date(Date.parse(item.issue))).toLocaleTimeString() || '-') : '-'}</td>
 						<td className="" style={{whiteSpace: 'pre-wrap'}}>{item.return ? ((new Date(Date.parse(item.return))).toDateString()+'\n'+(new Date(Date.parse(item.return))).toLocaleTimeString() || '-') : '-'}</td>
-						<td className={!(item.fine=="0")?"redtxt":null}>{item.fine ? (item.fine || '-') : '-'}</td>
+						
+						
 						
 					</tr>
 				)
@@ -65,13 +66,13 @@ render(){
 
 				const none=<div style={{"marginLeft":'20px'}}>-</div>
 				return(
-					<tr key={item.id} className="tableRow"style={{fontSize:'0.9em'}}>
+					<tr key={item.id} className="tableRow"style={{fontSize:'1.0em'}}>
 						<td className="">
 						<Link to={"/student/"+student.id} draggable="false"  className="">{student.name}</Link>
 
 						</td>
 						<td className="">{student.roll ? (student.roll|| '-') : '-'}</td>
-						<td className="">{student.year ? (student.year || '-') : '-'}</td>
+						
 						
 						
 						<td className="" style={{whiteSpace: 'pre-wrap'}}>{item.issue ? ((new Date(Date.parse(item.issue))).toDateString()+'\n'+(new Date(Date.parse(item.issue))).toLocaleTimeString() || '-') : '-'}</td>
@@ -106,17 +107,17 @@ render(){
                         </div>
             </div>
 
-			<div className="pageRow" id="booksBlock" style={{}}>
+			<div className="pageRow" id="booksBlock" style={{marginLeft:"20px",  paddingRight:"20px"}}>
 				<div className="thisBlock">
-					<div className="blockBody">
+					<div className="blockBody" >
 						<div className="thisTable" style={{height:'35vh'}}>
 							<div className="tbl-header">
-								<table>
+								<table >
 									<thead>
 									<tr>
 										<th style ={{color:'white'}} className="heigh-th">Name</th>
 										<th style ={{color:'white'}} className="heigh-th">ID</th>
-										<th style ={{color:'white'}} className="heigh-th">Year</th>
+										
 										<th style ={{color:'white'}} className="heigh-th">Borrowed</th>
 										
 									</tr>
@@ -145,7 +146,7 @@ render(){
                         </div>
             	</div>
 
-				<div className="pageRow" id="booksBlock" >
+				<div style={{marginLeft:"20px", paddingRight:"20px"}} className="pageRow" id="booksBlock" >
 				<div className="thisBlock">
 					<div className="blockBody" >
 						<div className="thisTable" style={{height:'35vh'}}>
@@ -157,7 +158,7 @@ render(){
 										<th style ={{color:'white'}} className="heigh-th">ID</th>
 										<th style ={{color:'white'}} className="heigh-th">Borrowed</th>
 										<th style ={{color:'white'}} className="heigh-th">Return</th>
-										<th style ={{color:'white'}} className="heigh-th">Fine</th>
+										
 									</tr>
 									</thead>
 								</table>

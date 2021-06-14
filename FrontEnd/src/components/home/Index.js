@@ -121,7 +121,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/countstudent', {
         <div className="row no-gutters align-items-center">
           <div className="col mr-2">
           <div className="text-xs font-weight-bold text-success text-uppercase mb-1 testcolor">
-            Issued</div>
+            BORROWED</div>
             <div className="h5 mb-0 font-weight-bold text-gray-800">{this.state.issued || 0}</div>
           </div>
           <div className="col-auto">

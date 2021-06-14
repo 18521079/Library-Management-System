@@ -48,7 +48,7 @@ export default class ListIndex extends React.Component {
 						<td className="">{item.phone ? (item.phone || '-') : '-'}</td>
 						
 						
-						<td className="">{item.year ? (item.year || '-') : '-'}</td>
+						
 						<td className="">{item.branch ? (item.branch || '-') : '-'}</td>
 						<td className="copies">{item.issued ? (item.issued || '-') : '-'}</td>
 						
@@ -93,18 +93,18 @@ export default class ListIndex extends React.Component {
 					<div className="blockBody">
 						<div className="thisTable mt9">
 							<div className="tbl-header">
-								<table className=' height-table-student'>
+								<table >
 									<thead style={{fontSize:'18px', color:'white'}}>
-									<tr style={{ color:'white'}}>
+									<tr  style={{height:'50px'}} style={{ color:'white'}}>
 									
-										<th style={{height:'50px', color:'white'}} className="">Name</th>
-										<th style={{height:'50px', color:'white'}} className="">ID</th>
-										<th style={{height:'50px', color:'white'}} className="">Phone</th>
-										<th style={{height:'50px', color:'white'}} className="">Year</th>
-										<th style={{height:'50px', color:'white'}} className="">Class</th>
-										<th style={{height:'50px', color:'white'}} className="">Issued Books</th>
+									<th style ={{color:'white', width:'300px', height:'50px'}} >Name</th>
+										<th style={{height:'50px !important', color:'white'}} className="">ID</th>
+										<th style={{height:'50px !important', color:'white'}} className="">Phone</th>
+									
+										<th style={{height:'50px !important', color:'white'}} className="">Class</th>
+										<th style={{height:'50px !important', color:'white'}} className="">Issued Books</th>
 										
-										<th style={{height:'50px', color:'white'}} className=" ">Action</th>
+										<th style={{height:'50px !important', color:'white'}} className=" ">Action</th>
 									</tr>
 									</thead>
 								</table>

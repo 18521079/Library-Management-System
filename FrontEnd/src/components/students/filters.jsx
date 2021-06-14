@@ -120,38 +120,48 @@ let wid='15vw';
 						
 
 									<dialog id="addStudent" className="dialogBox" onClick={Filters.hideModal} >
-										<div className="dialogTitle" onClick={Filters.preventHide}>
+										<div style={{background:'#282829'}} className="dialogTitle" onClick={Filters.preventHide}>
 											Add New Student
 											<button onClick={Filters.hideModal}>X</button>
 										</div>
-										<div className="dialogBody" onClick={Filters.preventHide} >
+										<div style={{background:'white'}} className="dialogBody" onClick={Filters.preventHide} >
 											<div style={{width:wid}}>
 												<label>Name</label>
-												<input onChange={this.updateInfo} name="name" value={this.state.name}/>
+												<div className="form-outline">
+													<input className="form-control" onChange={this.updateInfo} name="name" value={this.state.name}/>
+												</div>
 											</div>
 											<div style={{width:wid}}>
 												<label>ID</label>
-												<input onChange={this.updateInfo} name="roll" value={this.state.roll}/>
+												<div className="form-outline">
+													<input className="form-control" onChange={this.updateInfo} name="roll" value={this.state.roll}/>
+												</div>
 											</div>
 											<div style={{width:wid}}>
 												<label>Phone</label>
-												<input onChange={this.updateInfo} name="phone" value={this.state.phone}/>
+												<div className="form-outline">
+													<input className="form-control" onChange={this.updateInfo} name="phone" value={this.state.phone}/>
+												</div>
 											</div>
 											<div style={{width:wid}}>
 												<label>Year</label>
-												<input onChange={this.updateInfo} name="year" value={this.state.year}/>
+												<div className="form-outline">
+													<input className="form-control" onChange={this.updateInfo} name="year" value={this.state.year}/>
+												</div>
 											</div>
 											<div style={{width:wid}}>
 												<label>Class</label>
-												<input onChange={this.updateInfo} name="branch" value={this.state.branch}/>
+												<div className="form-outline">
+													<input className="form-control" onChange={this.updateInfo} name="branch" value={this.state.branch}/>
+												</div>
 											</div>
 											
 											
 											
 										</div>
 										<div className="dialogFooter" onClick={Filters.preventHide}>
-											<button onClick={this.add} disabled={!this.state.name||!this.state.roll}>Save</button>
-											<button onClick={Filters.hideModal}>Cancel</button>
+											<button  className="btn btndefaul" onClick={this.add} disabled={!this.state.name||!this.state.roll}>Save</button>
+											<button  className="btn  btn_normal" onClick={Filters.hideModal}> Cancel</button>
 										</div>
 									</dialog>
 

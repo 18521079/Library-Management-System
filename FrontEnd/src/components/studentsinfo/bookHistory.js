@@ -46,7 +46,7 @@ render(){
 						
 						<td className="" style={{whiteSpace: 'pre-wrap'}}>{item.issue ? ((new Date(Date.parse(item.issue))).toDateString()+'\n'+(new Date(Date.parse(item.issue))).toLocaleTimeString() || '-') : '-'}</td>
 						<td className="" style={{whiteSpace: 'pre-wrap'}}>{item.return ? ((new Date(Date.parse(item.return))).toDateString()+'\n'+(new Date(Date.parse(item.return))).toLocaleTimeString() || '-') : '-'}</td>
-						<td className={!(item.fine=="0")?"redtxt":null}>{item.fine ? (item.fine || '-') : '-'}</td>
+						
 						
 					</tr>
 				)
@@ -100,8 +100,8 @@ render(){
                         </div>
             </div>
 
-			<div className="pageRow" id="booksBlock" style={{}}>
-				<div className="thisBlock">
+			<div style={{marginLeft:"20px", paddingRight:"20px"}}  className="pageRow" id="booksBlock" style={{}}>
+				<div style={{marginLeft:"20px", paddingRight:"20px"}} className="thisBlock">
 					<div className="blockBody">
 						<div className="thisTable" style={{height:'35vh'}}>
 							<div className="tbl-header">
@@ -140,7 +140,7 @@ render(){
                         </div>
                       </div>
 
-				<div className="pageRow" id="booksBlock" >
+				<div style={{marginLeft:"20px", paddingRight:"20px"}} className="pageRow" id="booksBlock" >
 				<div className="thisBlock">
 					<div className="blockBody" >
 						<div className="thisTable" style={{height:'35vh'}}>
@@ -154,7 +154,7 @@ render(){
 									
 										<th style={{color:"white", height:"50px", fontSize:"18px"}} className="">Borrowed</th>
 										<th style={{color:"white", height:"50px", fontSize:"18px"}} className="">Return</th>
-										<th style={{color:"white", height:"50px", fontSize:"18px"}} className="">Fine</th>
+										
 									</tr>
 									</thead>
 								</table>

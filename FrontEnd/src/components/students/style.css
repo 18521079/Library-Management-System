@@ -1,3 +1,46 @@
+.setHeight
+{
+    height: 50px !important;
+    padding-top: 10px;
+}
+.btn_normal{
+	color:#3AE7E1 !important;
+	background-color:white !important;
+	border-color: #3AE7E1 !important;
+	transition: all 1s ;
+	-moz-transition: all 1s;
+	-webkit-transition: all 1s;
+
+}
+
+.btn_normal:hover{
+	transform:translate(3px,5px);
+	transform-origin: 100%;
+	background-color: white !important;
+	color: #3AE7E1 !important;
+}
+
+.btndefaul{
+	color: whitesmoke !important;
+	background-color: #3AE7E1 !important;
+	border-color: #3AE7E1 !important;
+	transition: all 1s;
+	-moz-transition: all 1s;
+	-webkit-transition: all 1s;
+
+}
+
+.btndefaul:hover{
+	transform:translate(3px,5px);
+	transform-origin: 100%;
+	color: white !important;
+	
+}
+
+.updateHeight
+{
+    height: 60px !important;
+}
 .ml1
 {
     margin-left: 10px;

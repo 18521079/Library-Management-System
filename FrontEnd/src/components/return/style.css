@@ -1,9 +1,45 @@
+.btn_normal{
+	color:#3AE7E1 !important;
+	background-color:white !important;
+	border-color: #3AE7E1 !important;
+	transition: all 1s ;
+	-moz-transition: all 1s;
+	-webkit-transition: all 1s;
+
+}
+
+.btn_normal:hover{
+	transform:translate(3px,5px);
+	transform-origin: 100%;
+	background-color: white !important;
+	color: #3AE7E1 !important;
+}
+
+.btndefaul{
+	color: whitesmoke !important;
+	background-color: #3AE7E1 !important;
+	border-color: #3AE7E1 !important;
+	transition: all 1s;
+	-moz-transition: all 1s;
+	-webkit-transition: all 1s;
+
+}
+
+.btndefaul:hover{
+	transform:translate(3px,5px);
+	transform-origin: 100%;
+	color: white !important;
+	
+}
 .pageView > .pageRow#booksBlock{
     padding-top: 0;
     padding-bottom: 0;
     height: calc(100% - 80px);
 }
 
+.Link{
+    list-style-type: none !important;
+}
 .table-height
 {
     height: 400px !important;

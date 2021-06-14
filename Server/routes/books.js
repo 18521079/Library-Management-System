@@ -49,7 +49,7 @@ router.delete("/:id", async (req, res) => {
 // get a book
 router.get("/:id", async (req, res) => {
     try {
-        const book = await Book.findById(req.params.id);
+        const book = await Book.find({Book.bookId: req.params.id});
         res.status(200).json(book);
     } catch (err) {
         res.status(500).json(err);

@@ -97,7 +97,7 @@ export default class ListIndex extends React.Component {
 									<thead style={{fontSize:'18px', color:'white'}}>
 									<tr  style={{height:'50px'}} style={{ color:'white'}}>
 									
-									<th style ={{color:'white', width:'300px', height:'50px'}} >Name</th>
+									<th style ={{color:'white', height:'50px'}} >Name</th>
 										<th style={{height:'50px !important', color:'white'}} className="">ID</th>
 										<th style={{height:'50px !important', color:'white'}} className="">Phone</th>
 									

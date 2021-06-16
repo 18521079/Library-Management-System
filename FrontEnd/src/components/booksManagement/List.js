@@ -130,7 +130,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookissue', {
 
 						{item.availablecopies? 
 
-						<a style={{marginLeft:'4px'}} onClick={()=>{this.setState({bookid:item.id,bookname:item.name,author:item.author,publisher:item.publisher,edition:item.edition,isbn:item.isbn},List.showModal())}}><i  style={{color:"#87CEFA", fontSize:'1.4em'}} class="far fa-edit"></i></a>
+<Link style={{textDecoration:"none"}} to={"/book/"+item.id} draggable="false"  className="">&nbsp; &nbsp;&nbsp; &nbsp;<i style={{color:"#87CEFA", fontSize:'1.4em'}} class="fas fa-book"></i></Link>
 					     :
 					     <a style={{cursor:'not-allowed',opacity:'0.6',marginLeft:'4px'}}>Issue</a>
 					     }
@@ -248,7 +248,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookissue', {
 										
 										
 										<div className="dialogFooter" onClick={List.preventHide}>
-											<button onClick={this.issue} disabled={!this.state.found||!this.state.search||(this.state.issued>=3)}>Issue</button>
+											<button onClick={this.issue} disabled={!this.state.found||!this.state.search||(this.state.issued>=3)}>Borrow</button>
 											<button onClick={List.hideModal}>Cancel</button>
 										</div>
 									</dialog>

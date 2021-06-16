@@ -1,152 +1,126 @@
 import React from 'react';
 
+import Info from './info';
+import BookHistory from './bookHistory';
+import './style.css'
+import { css } from '@emotion/core';
+import { ScaleLoader } from 'react-spinners';
 
-export default class BookUpdate extends React.Component {
+
+const override = css`
+    display:inline;
+    margin-top: 0 auto;
+    border-color: red;
+
+`;
 
 
-	constructor(){
+export default class BooksUpdatePageIndex extends React.Component {
+
+constructor(){
 		super();
 		this.state = {
             id:null,
-        	book:null
+        	book:null,
+        	bookHistory:[],
+        	students:[],
+        	loading:true
 		};
 		
 	}
 
+fetchBookbyID=(id)=>{
+if(id)
+
+fetch(`https://stark-hamlet-65683.herokuapp.com/bookinfo/${id}`,{
+      method: 'get',
+      headers: {'Content-Type': 'application/json'}
+  }).then(response=>response.json()).then(data=>{if(data)this.setState({book:data[0]})});
+else
+	window.location.href = window.location.origin+"/books";
+
+
+}
+fetchBookFromHistory=(id)=>{
+
+if(id)
+
+fetch(`https://stark-hamlet-65683.herokuapp.com/issuereturn/${id}`,{
+      method: 'get',
+      headers: {'Content-Type': 'application/json'}
+  }).then(response=>response.json()).then(data=>{if(data)this.setState({bookHistory:data})});
+
+}
+
+fetchAllStudents=()=>{
+fetch('https://stark-hamlet-65683.herokuapp.com/students', {
+      method: 'get',
+      headers: {'Content-Type': 'application/json'}
+  }).then(response=>response.json()).then(data=>{if(data)this.setState({students:data})})
+
+}
+
+
+componentDidMount(){
+let id=window.location.pathname;
+id=id.substring(id.lastIndexOf('/')+1);
+this.setState({id});
+this.fetchBookbyID(id);
+this.fetchBookFromHistory(id);
+this.fetchAllStudents();
+}
 
 
 render(){
 
-let {book}=this.props;
-
-
-return(
-
-<div className="thisBlock halfBlock">
-
-
-						<div className="row ml1">
-                        <div className="col-lg-3 ml130 mt70">
-                          <div className="d-flex position-relative float-left">
-                            <h1 className="section-title-1">Book Info</h1>
-                          </div>
-                        </div>
-                      </div>
-
-					
-
-					<div className="col-md-4 col-lg-4">
- 					
-                        </div>
-						
-						
-							  <div className="blockBody custom">
-									<div className="infoDisplay">
-										<div className='row ml1'>
-											<label style={{fontSize:'20px', color:'#1E90FF'}}>Name</label>
-										</div>
-										<div className='row ml1'>
-											<label >{book.name || '-'} </label>
-										</div>
-										
-									</div>
-
-									<div className="infoDisplay">
-										<div className='row ml1'>
-											<label style={{fontSize:'20px', color:'#1E90FF'}}>ID Book</label>
-										</div>
-										<div className='row ml1'>
-											<label >{book.isbn || '-'} </label>
-										</div>
-									</div>
-
-									<div className="infoDisplay">
-										<div className='row ml1'>
-											<label style={{fontSize:'20px', color:'#1E90FF'}}>Author</label>
-										</div>
-										<div className='row ml1'>
-											<label >{book.author || '-'} </label>
-										</div>
-									</div>
-
-									<div className="infoDisplay">
-										<div className='row ml1'>
-											<label style={{fontSize:'20px', color:'#1E90FF'}}>Publisher</label>
-										</div>
-										<div className='row ml1'>
-											<label >{book.publisher || '-'} </label>
-										</div>
-									</div>
+	const {book,bookHistory,students}=this.state;
+	return(
+				<div className="pageView">
+							{book&&students.length>0?
+						<div className="pageRow">
+											
+								<Info book={book}/>
 								
 
-									<div className="infoDisplay">
-										
-										<div className='row ml1'>
-											<label style={{fontSize:'20px', color:'#1E90FF'}}>Print Year</label>
-										</div>
-										<div className='row ml1'>
-											<label >{book.printyear || '-'} </label>
-										</div>
-									</div>
-										
-									
-									<div className="infoDisplay">
-										<div className='row ml1'>
-											<label style={{fontSize:'20px', color:'#1E90FF'}}>The number of Books</label>
-										</div>
-										<div className='row ml1'>
-											<label >{book.totalcopies || '-'} </label>
-										</div>
-									</div>
+						</div>
+										 :
 
-									<div className="infoDisplay">
-										<div className='row ml1'>
-											<label style={{fontSize:'20px', color:'#1E90FF'}}>Available Books</label>
-										</div>
-										<div className='row ml1'>
-											<label >{book.availablecopies || '-'} </label>
-										</div>
-									</div>
 
-									<div className="infoDisplay">
-										<div className='row ml1'>
-											<label style={{fontSize:'20px', color:'#1E90FF'}}>Type</label>
-										</div>
-										<div className='row ml1'>
-											<label >{book.type || '-'} </label>
-										</div>
-									</div>
+										 <div  className="pageRow">
+										     <div style={{marginLeft:'50%',marginTop:'20%'}}>
+												 <div className='sweet-loading'>
+											        <ScaleLoader
+											          css={override}
+											          sizeUnit={"px"}
+											          color={'#0099cc'}
+											          size={60}
+											          height={35}
+											          width={8}
+											          radius={2}
+											          loading={this.state.loading}
+											        />
+						      					  </div> 
+						      				</div>
+				      					</div>
 
-									<div className="infoDisplay">
-										<div className='row ml1'>
-											<label style={{fontSize:'20px', color:'#1E90FF'}}>Price</label>
-										</div>
-										<div className='row ml1'>
-											<label >{book.price || '-'} </label>
-										</div>
-									</div>
 
-									<div className="infoDisplay">
-										<div className='row ml1'>
-											<label style={{fontSize:'20px', color:'#1E90FF'}}>Additionals</label>
-										</div>
-										<div className='row ml1'>
-											<label >{book.additionals || '-'} </label>
-										</div>
-									</div>
-									
-									
+							}
+
+
+
+
 				</div>
-																	
-														    
-												
-												
- </div>
 
 
 
 
-	)
+
+
+
+
+		 )
+
+
 
 
 
@@ -155,11 +129,4 @@ return(
 
 
 
-
-
-
-
-
-
-
-}//class closed 
+}//class closed

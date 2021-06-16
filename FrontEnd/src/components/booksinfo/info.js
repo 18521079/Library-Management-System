@@ -36,17 +36,7 @@ return(
 					{/*<img style={{height:"300px", width:"280px"}} src="https://res.cloudinary.com/tech-stories/image/upload/v1565403761/Screen_Shot_2019-07-31_at_4.04.44_PM_yweslw.png"></img> */}
 
 					<div className="col-md-4 col-lg-4">
-                           {/* <div className="card_ card-info" style={{width: '18rem'}}>
-                                <img src={img} className="card-img-top" alt="..." />
-                                <div className="card-body">
-                                <h5 className="card-title">{headerTitle}</h5>
-                                <p className="card-text">{headerText}</p>
-                                <Link
-                                onClick={()=>value.handleDetail(id)}
-                                 to="/details" className="btn btn-outline-primary text-newbook">More Infor...</Link>
-                                </div>
-                            </div>
-                            */}
+                           
 
 {/*	<div className="profile-card" style={{width: '280px', height:"330px"}}>
         <div className="profile-img">

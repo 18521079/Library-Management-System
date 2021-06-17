@@ -216,6 +216,7 @@ let wid='20vw';
 												<div className="form-group">
 												<select name='publisher' onChange={this.updateInfo}  onClick= {this.onClick} className="form-control"   placeholder="publisher" value={this.state.publisher} >
 													<option value={"Hachette Livre"}>Hachette Livre</option>
+													<option value={"UIT"}>UIT</option>
 													<option value={"HarperCollins"}>HarperCollins</option>
 													<option value={"Macmillan"}>Macmillan</option>
 													<option value={"Pearson"}>Pearson</option>
@@ -231,8 +232,9 @@ let wid='20vw';
 											{/*	<input onChange={this.updateInfo} name="type" value={this.state.type}/> */}
 											<div className="form-group">
 												<select  onChange={this.updateInfo} name="type"  value={this.state.type} onClick= {this.onClick} className="form-control"   placeholder="type"  >
-												<option value={1}>Programming</option>
+												
                                         <option value={"Mathematics"}>Mathematics</option>
+										<option value={"Programming"}>Programming</option>
                                         <option value={"Supporting Fields"}>Supporting Fields</option>
 										<option value={"Operating System"}>Operating System</option>
 										<option value={"Computer Science"}>Computer Science</option>
@@ -262,6 +264,7 @@ let wid='20vw';
 												<label>Price  <i style={{color:"#3AE7E1"}} class="fas fa-check-square"></i></label>
 												<div className="form-group">
 													<input placeholder="Price   " className="form-control" onChange={this.updateInfo} name="price" value={this.state.price}/>
+													
 												</div>
 											</div>
 

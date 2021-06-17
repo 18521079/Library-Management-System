@@ -130,7 +130,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookissue', {
 
 						{item.availablecopies? 
 
-<Link style={{textDecoration:"none"}} to={"/book/"+item.id} draggable="false"  className="">&nbsp; &nbsp;&nbsp; &nbsp;<i style={{color:"#87CEFA", fontSize:'1.4em'}} class="fas fa-book"></i></Link>
+<Link style={{textDecoration:"none"}} to={"/bookUpdate/"+item.id} draggable="false"  className="">&nbsp; &nbsp;&nbsp; &nbsp;<i style={{color:"#87CEFA", fontSize:'1.4em'}} class="fas fa-edit"></i></Link>
 					     :
 					     <a style={{cursor:'not-allowed',opacity:'0.6',marginLeft:'4px'}}>Issue</a>
 					     }

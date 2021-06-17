@@ -1,3 +1,18 @@
+.topbarImg {
+    width: 255px;
+    height: 255px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  .imgStudent {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+  }
 .updateHeight
 {
     height:60px !important;

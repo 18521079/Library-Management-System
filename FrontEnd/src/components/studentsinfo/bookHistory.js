@@ -63,7 +63,7 @@ render(){
 				const none=<div style={{"marginLeft":'20px'}}>-</div>
 				if(book)
 				return(
-					<tr key={item.id} className="tableRow"style={{fontSize:'0.9em'}}>
+					<tr key={item.id} className="tableRow"style={{fontSize:'0.8em'}}>
 						<td className="">{book.name ? (book.name|| '-') : '-'}</td>
 						<td className="">{book.isbn ? (book.publisher|| '-') : '-'}</td>
 						<td className="">{book.author ? (book.author || '-') : '-'}</td>
@@ -161,7 +161,7 @@ render(){
 							</div>
 							<div className="tbl-content">
 								<table>
-									<tbody style={{fontSize:"17px"}}>
+									<tbody style={{fontSize:"15px"}}>
 										{itemListr}
 									</tbody>
 								</table>

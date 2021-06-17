@@ -33,7 +33,7 @@ return(
                         </div>
                       </div>
 
-
+							<img style={{marginLeft:"95px"}} className='topbarImg'  src={"/assets/img/"+`${student.id}`+".jpeg"}></img>
 								 
 							  <div className="blockBody custom">
 

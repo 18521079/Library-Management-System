@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './style.css'
 
 export default class BooksInfo extends React.Component {
 
@@ -8,19 +8,26 @@ export default class BooksInfo extends React.Component {
 		super();
 		this.state = {
             id:null,
-        	book:null
+        	book:null,
+			isDisplayForm : false
 		};
 		
 	}
 
+	handleClick=()=>{
+		this.setState({isDisplayForm: !this.state.isDisplayForm})
 
+	}
 
 render(){
 
 let {book}=this.props;
+var elmDispayform= this.state.isDisplayForm ? <img style={{marginLeft:"35px", marginTop:"-20px", marginBottom:"20px", width:"400px"}} src={"/assets/img/"+`${book.id}`+".jpg"} />: '';
 
 
 return(
+	
+	
 
 <div className="thisBlock halfBlock">
 
@@ -28,15 +35,22 @@ return(
 						<div className="row ml1">
                         <div className="col-lg-3 ml130 mt70">
                           <div className="d-flex position-relative float-left">
-                            <h1 className="section-title-1">Book Info</h1>
+                            <h1 className="section-title-1">Book Info </h1>  
                           </div>
                         </div>
-                      </div>
+						<div className="col">
+						<button onClick={this.handleClick} style={{fontSize:'1.1em', marginLeft:"200px"}} className="btn  btn_normal mr5 mb3 mt3" >
+                                                <i className="fas fa-image"></i> &nbsp; Image
+                                </button>
+						</div>
+						</div>
+						
 
 					{/*<img style={{height:"300px", width:"280px"}} src="https://res.cloudinary.com/tech-stories/image/upload/v1565403761/Screen_Shot_2019-07-31_at_4.04.44_PM_yweslw.png"></img> */}
 
 					<div className="col-md-4 col-lg-4">
                            
+
 
 {/*	<div className="profile-card" style={{width: '280px', height:"330px"}}>
         <div className="profile-img">
@@ -54,11 +68,14 @@ return(
         </div>
       </div>
 						*/}
+
 						
                         </div>
 						
 						
 							  <div className="blockBody custom">
+								 {/* <img src={`/assets/img/" + "" +".jpg`}></img> */}
+								 {elmDispayform}
 									<div className="infoDisplay">
 										<div className='row ml1'>
 											<label style={{fontSize:'20px', color:'#1E90FF'}}>Name</label>

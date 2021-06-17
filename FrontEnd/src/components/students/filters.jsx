@@ -128,31 +128,40 @@ let wid='15vw';
 											<div style={{width:wid}}>
 												<label>Name</label>
 												<div className="form-outline">
-													<input className="form-control" onChange={this.updateInfo} name="name" value={this.state.name}/>
+													<input placeholder="name" className="form-control" onChange={this.updateInfo} name="name" value={this.state.name}/>
 												</div>
 											</div>
+
+											<div style={{width:wid}}>
+												<label >Image</label>
+												<label htmlFor="file" className="shareOption">
+													 <input  id="file" class="form-control" type="file" id="formFileMultiple"  accept=".png,.jpeg,.jpg" multiple />
+													
+												</label>
+											</div>
+
 											<div style={{width:wid}}>
 												<label>ID</label>
 												<div className="form-outline">
-													<input className="form-control" onChange={this.updateInfo} name="roll" value={this.state.roll}/>
+													<input placeholder="id" className="form-control" onChange={this.updateInfo} name="roll" value={this.state.roll}/>
 												</div>
 											</div>
 											<div style={{width:wid}}>
 												<label>Phone</label>
 												<div className="form-outline">
-													<input className="form-control" onChange={this.updateInfo} name="phone" value={this.state.phone}/>
+													<input placeholder="phone" className="form-control" onChange={this.updateInfo} name="phone" value={this.state.phone}/>
 												</div>
 											</div>
 											<div style={{width:wid}}>
 												<label>Year</label>
 												<div className="form-outline">
-													<input className="form-control" onChange={this.updateInfo} name="year" value={this.state.year}/>
+													<input placeholder="year" className="form-control" onChange={this.updateInfo} name="year" value={this.state.year}/>
 												</div>
 											</div>
 											<div style={{width:wid}}>
 												<label>Class</label>
 												<div className="form-outline">
-													<input className="form-control" onChange={this.updateInfo} name="branch" value={this.state.branch}/>
+													<input placeholder="class" className="form-control" onChange={this.updateInfo} name="branch" value={this.state.branch}/>
 												</div>
 											</div>
 											

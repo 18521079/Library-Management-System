@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';	
 import { css } from '@emotion/core';
 import { ScaleLoader } from 'react-spinners';
+import './style.css';
 
 const override = css`
     display:inline;
@@ -43,7 +44,9 @@ export default class ListIndex extends React.Component {
 				const none=<div style={{"paddingLeft":'20px'}}>-</div>
 				return(
 					<tr key={item.id} className="tableRow"style={{fontSize:'0.9em'}}>
-						<td className="" >{item.name}</td>
+						<td className="" > <img  style={{marginLeft:"20px"}} className='imgStudent '  src={"/assets/img/"+`${item.id}`+".jpeg"}></img> </td>
+						<td  className="" >{item.name}</td>
+						
 						<td className="">{item.roll ? (item.roll|| '-') : '-'}</td>
 						<td className="">{item.phone ? (item.phone || '-') : '-'}</td>
 						
@@ -96,7 +99,7 @@ export default class ListIndex extends React.Component {
 								<table >
 									<thead style={{fontSize:'18px', color:'white'}}>
 									<tr  style={{height:'50px'}} style={{ color:'white'}}>
-									
+									<th style ={{color:'white', height:'50px', marginLeft:"50px"}} >Image</th>
 									<th style ={{color:'white', height:'50px'}} >Name</th>
 										<th style={{height:'50px !important', color:'white'}} className="">ID</th>
 										<th style={{height:'50px !important', color:'white'}} className="">Phone</th>

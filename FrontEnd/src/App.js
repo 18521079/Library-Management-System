@@ -30,6 +30,12 @@ const BooksInfoIndex = Loadable({
     loader: () => import('./components/booksinfo/Index'),
     loading: () => <div> </div>,
 });
+
+const BooksUpdateIndex = Loadable({
+    loader: () => import('./components/booksinfo/bookupdate'),
+    loading: () => <div> </div>,
+});
+
 const StudentsInfoIndex = Loadable({
     loader: () => import('./components/studentsinfo/Index'),
     loading: () => <div> </div>,
@@ -106,7 +112,7 @@ componentDidMount(){
                     <Route path="/return" component={ReturnIndex} />
                     <Route path="/students" component={StudentsIndex} />
                     <Route path="/book/*" component={BooksInfoIndex} />
-                    
+                    <Route path="/bookUpdate/*" component={BooksUpdateIndex} />
                     <Route path="/books_management" component={BooksManageMentIndex} />
                     <Route path="/student/*" component={StudentsInfoIndex} />
                      <Route exact path="*" component={NotFound} />

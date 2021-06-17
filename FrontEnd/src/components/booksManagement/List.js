@@ -117,13 +117,13 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookissue', {
 						<Link to={"/book/"+item.id} draggable="false"  className="">{item.name}</Link>
 
 						</td>
-						<td className="">{item.isbn ? (item.isbn|| '-') : '-'}</td>
-						<td className="">{item.author ? (item.author || '-') : '-'}</td>
+						<td className="">{item.isbn ? (item.isbn|| '-') : 'ISBN3674'}</td>
+						<td className="">{item.author ? (item.author || '-') : 'UIT'}</td>
 						
 						
 						
-						<td className="">{item.publisher ? (item.publisher || '-') : '-'}</td>
-						<td className="copies">{item.availablecopies ? (item.availablecopies || '-') : '-'}</td>
+						<td className="">{item.publisher ? (item.publisher || '-') : 'UIT'}</td>
+						<td className="copies">{item.availablecopies ? (item.availablecopies || '-') : '0'}</td>
 						
 						<td className="">
 						

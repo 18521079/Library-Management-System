@@ -47,13 +47,13 @@ export default class ListIndex extends React.Component {
 						<td className="" > <img  style={{marginLeft:"20px"}} className='imgStudent '  src={"/assets/img/"+`${item.id}`+".jpeg"}></img> </td>
 						<td  className="" >{item.name}</td>
 						
-						<td className="">{item.roll ? (item.roll|| '-') : '-'}</td>
-						<td className="">{item.phone ? (item.phone || '-') : '-'}</td>
+						<td className="">{item.roll ? (item.roll|| '-') : '18521079'}</td>
+						<td className="">{item.phone ? (item.phone || '-') : '0966773746'}</td>
 						
 						
 						
-						<td className="">{item.branch ? (item.branch || '-') : '-'}</td>
-						<td className="copies">{item.issued ? (item.issued || '-') : '-'}</td>
+						<td className="">{item.branch ? (item.branch || '-') : 'KTPM2018'}</td>
+						<td className="copies">{item.issued ? (item.issued || '-') : '0'}</td>
 						
 						<td className="">
 						<Link to={"/student/"+item.id} draggable="false"  className="ml1"><i style={{color:"#87CEFA", fontSize:'1.4em'}} class="fas fa-user-graduate"></i></Link>

@@ -112,7 +112,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 				return(
 					<tr key={item.id} className="tableRow"style={{fontSize:'0.9em'}}>
 						<td className="" >{item.bookname}</td>
-						<td className="">{item.isbn ? (item.isbn|| '-') : '-'}</td>
+						
 						<td className="">{item.author ? (item.author || '-') : '-'}</td>
 						
 						
@@ -173,7 +173,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 								<thead style={{color:'white !important', fontSize:'22px'}}className="thead-dark">
 									<tr style={{ fontSize:'22px'}}>
 										<th style={{height:'80px'}} className="">Name</th>
-										<th className="">ID Book</th>
+										
 										<th className="">Author</th>
 										<th className="">Publisher</th>
 										<th className="">Student</th>

@@ -66,10 +66,10 @@ return(
 
 								<div className="infoDisplay">
 										<div className='row ml1'>
-											<label style={{fontSize:'20px', color:'#1E90FF'}}>Date of birth</label>
+											<label style={{fontSize:'20px', color:'#1E90FF'}}>Year</label>
 										</div>
 										<div className='row ml1'>
-											<label >24/4/{student.year || '-'}</label>
+											<label >{student.year || '-'}</label>
 										</div>
 								</div>
 
@@ -78,7 +78,7 @@ return(
 											<label style={{fontSize:'20px', color:'#1E90FF'}}>Class</label>
 										</div>
 										<div className='row ml1'>
-											<label >{student.branch || '-'}</label>
+											<label >KTPM2018</label>
 										</div>
 								</div>
 
@@ -87,7 +87,7 @@ return(
 											<label style={{fontSize:'20px', color:'#1E90FF'}}>No. Of Borrowed</label>
 										</div>
 										<div className='row ml1'>
-											<label >{student.issued || '-'}</label>
+											<label >{student.issued || '0'}</label>
 										</div>
 								</div>
 

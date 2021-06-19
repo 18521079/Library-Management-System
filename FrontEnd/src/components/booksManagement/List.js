@@ -117,7 +117,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookissue', {
 						<Link to={"/book/"+item.id} draggable="false"  className="">{item.name}</Link>
 
 						</td>
-						<td className="">{item.isbn ? (item.isbn|| '-') : 'ISBN3674'}</td>
+						<td className="">{item.isbn ? (item.isbn|| '-') : 'IDBOOK397'}</td>
 						<td className="">{item.author ? (item.author || '-') : 'UIT'}</td>
 						
 						
@@ -132,7 +132,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookissue', {
 
 <Link style={{textDecoration:"none"}} to={"/bookUpdate/"+item.id} draggable="false"  className="">&nbsp; &nbsp;&nbsp; &nbsp;<i style={{color:"#87CEFA", fontSize:'1.4em'}} class="fas fa-edit"></i></Link>
 					     :
-					     <a style={{cursor:'not-allowed',opacity:'0.6',marginLeft:'4px'}}>Issue</a>
+					     <Link style={{textDecoration:"none"}} to={"/bookUpdate/"+item.id} draggable="false"  className="">&nbsp; &nbsp;&nbsp; &nbsp;<i style={{color:"#87CEFA", fontSize:'1.4em'}} class="fas fa-edit"></i></Link>
 					     }
 
 						<i style={{color:"#87CEFA", fontSize:'1.4em'}} className="far fa-trash-alt ml1"></i>

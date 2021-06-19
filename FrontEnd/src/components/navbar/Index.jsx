@@ -17,7 +17,7 @@ export default class NavBar extends React.Component{
 			        </li>
 			        <li className="navItem logout" style={{marginTop:'10px'}} >
 					<a className="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<span className="mr-2 d-none d-lg-inline text-gray-600 small">Khánh Ly</span>
+						<span className="mr-2 d-none d-lg-inline text-gray-600 small">Ly Nguyen Thi Khanh</span>
 						<img style={{width:'35px', height:'35px'}}className="img-profile rounded-circle" src="assets/img/avata.jpg" />
 					</a>
 			        </li>

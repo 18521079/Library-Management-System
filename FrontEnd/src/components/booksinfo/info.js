@@ -91,7 +91,7 @@ return(
 											<label style={{fontSize:'20px', color:'#1E90FF'}}>ID Book</label>
 										</div>
 										<div className='row ml1'>
-											<label >{book.isbn || '-'} </label>
+											<label >{book.isbn || 'IDBOOK397'} </label>
 										</div>
 									</div>
 
@@ -109,7 +109,19 @@ return(
 											<label style={{fontSize:'20px', color:'#1E90FF'}}>Publisher</label>
 										</div>
 										<div className='row ml1'>
-											<label >{book.publisher || '-'} </label>
+											
+											<div className="form-group">
+												<select name='publisher' onChange={this.updateInfo}  onClick= {this.onClick} className="form-control"   placeholder="publisher" value={this.state.publisher} >
+													<option value={"Hachette Livre"}>{book.publisher}</option>
+													<option value={"UIT"}>UIT</option>
+													<option value={"HarperCollins"}>HarperCollins</option>
+													<option value={"Macmillan"}>Macmillan</option>
+													<option value={"Pearson"}>Pearson</option>
+													<option value={"Scholastic"}>Scholastic</option>
+													<option value={"Wiley"}>Wiley</option>
+													<option value={"Kodansha"}>Kodansha</option>
+												</select>
+											</div>
 										</div>
 									</div>
 								
@@ -148,7 +160,7 @@ return(
 											<label style={{fontSize:'20px', color:'#1E90FF'}}>Type</label>
 										</div>
 										<div className='row ml1'>
-											<label >{book.type || '-'} </label>
+											<label >{book.type=="1"? "Programming"  : book.type } </label>
 										</div>
 									</div>
 
@@ -157,7 +169,7 @@ return(
 											<label style={{fontSize:'20px', color:'#1E90FF'}}>Price</label>
 										</div>
 										<div className='row ml1'>
-											<label >{book.price || '-'} </label>
+											<label >{book.price || '-'} $</label>
 										</div>
 									</div>
 

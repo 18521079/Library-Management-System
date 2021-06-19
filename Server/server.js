@@ -10,6 +10,7 @@ const userRoute = require("./routes/users")
 const authRoute = require("./routes/author");
 const bookRoute = require("./routes/books");
 const categoryRoute = require("./routes/category");
+const number = require("./routes/numbers");
 
 dotenv.config();
 
@@ -28,6 +29,7 @@ app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/books", bookRoute);
 app.use("/api/category", categoryRoute);
+app.use("/api/number", number);
 
 app.listen(5000,()=>{
     console.log("Backend sever is running!");

@@ -124,11 +124,13 @@ export default class SideBar extends React.Component{
       </li>
 	  </Link>
 
-
+		
+		<Link  style={{color:'#b4bbc7'}} to ="/parameters">
       <li className="list-item">
         <i className="list-item-icon fas fa-toolbox" />
-        <span className="list-item-text">Report</span>
+        <span className="list-item-text">Parameters</span>
       </li>
+	  </Link>
       <li className="list-item">
         <i className="list-item-icon fas fa-shopping-basket" />
         <span className="list-item-text">Account</span>

@@ -112,10 +112,10 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 					<tr key={item.id} className="tableRow"style={{fontSize:'0.9em'}}>
 						<td className="" >{item.bookname}</td>
 					
-						<td className="">{item.author ? (item.author || '-') : '-'}</td>
+						<td className="">{item.author=="1" ? "UIT" : item.author}</td>
 						
 						
-						<td className="">{item.publisher ? (item.publisher || '-') : '-'}</td>
+						<td className="">{item.publisher=="3" ? "UIT" : item.publisher}</td>
 						
 						<td className="">{item.studentname ? (item.studentname || '-') : '-'}</td>
 						<td className="">{item.roll ? (item.roll || '-') : '-'}</td>

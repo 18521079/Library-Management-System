@@ -110,18 +110,7 @@ return(
 										</div>
 										<div className='row ml1'>
 											
-											<div className="form-group">
-												<select name='publisher' onChange={this.updateInfo}  onClick= {this.onClick} className="form-control"   placeholder="publisher" value={this.state.publisher} >
-													<option value={"Hachette Livre"}>{book.publisher}</option>
-													<option value={"UIT"}>UIT</option>
-													<option value={"HarperCollins"}>HarperCollins</option>
-													<option value={"Macmillan"}>Macmillan</option>
-													<option value={"Pearson"}>Pearson</option>
-													<option value={"Scholastic"}>Scholastic</option>
-													<option value={"Wiley"}>Wiley</option>
-													<option value={"Kodansha"}>Kodansha</option>
-												</select>
-											</div>
+										<label >{book.publisher || '-'} </label>
 										</div>
 									</div>
 								

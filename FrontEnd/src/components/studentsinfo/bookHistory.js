@@ -65,8 +65,8 @@ render(){
 				return(
 					<tr key={item.id} className="tableRow"style={{fontSize:'0.8em'}}>
 						<td className="">{book.name ? (book.name|| '-') : '-'}</td>
-						<td className="">{book.isbn ? (book.publisher|| '-') : '-'}</td>
-						<td className="">{book.author ? (book.author || '-') : '-'}</td>
+						<td className="">{book.isbn ? (book.publisher|| 'o') : 'UIT'}</td>
+						<td className="">{book.author ? "UIT" : book.author}</td>
 						
 						
 						<td className="" style={{whiteSpace: 'pre-wrap'}}>{item.issue ? ((new Date(Date.parse(item.issue))).toDateString()+'\n'+(new Date(Date.parse(item.issue))).toLocaleTimeString() || '-') : '-'}</td>

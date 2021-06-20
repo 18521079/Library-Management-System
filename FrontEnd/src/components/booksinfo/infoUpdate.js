@@ -71,15 +71,17 @@ return(
 										<div className='row ml1'>
 										
                                             <div className="form-group">
-                                    <input style={{marginBottom:"-15px"}} placeholder={book.isbn || '-'} type="text" className="form-control" name='publishingYear'  onChange={this.onChange}/>   
+                                    <input style={{marginBottom:"-15px"}} placeholder={book.isbn || 'IDBOOK397'} type="text" className="form-control" name='publishingYear'  onChange={this.onChange}/>   
                                 </div>
 										</div>
 									</div>
 
 									<div className="infoDisplay">
-										<div className='row ml1'>
+										<div  className='row ml1'>
 											<label style={{fontSize:'20px', color:'#1E90FF'}}>Author</label>
-                                            <select className="form-control"  onChange={this.updateInfo} name="author" value={this.state.author} placeholder={book.author || '-'} >
+											</div>
+											<div  className='row ml1'>
+                                            <select  className="form-control"  onChange={this.updateInfo} name="author" value={this.state.author} placeholder={book.author || '-'} >
 													<option value={book.author || '-'}>{book.author || '-'}</option>
 													<option value={"Raoul-Gabriel"}>Raoul-Gabriel</option>
 													<option value={"Macmillan"}>Macmillan</option>
@@ -97,7 +99,19 @@ return(
 											<label style={{fontSize:'20px', color:'#1E90FF'}}>Publisher</label>
 										</div>
 										<div className='row ml1'>
-											<label >{book.publisher || '-'} </label>
+										<div className="form-group">
+												<select style={{marginBottom:"-15px"}} name='publisher' onChange={this.updateInfo}  onClick= {this.onClick} className="form-control"   placeholder="publisher" value={this.state.publisher} >
+													<option value={"Hachette Livre"}>{book.publisher}</option>
+													<option value={"UIT"}>UIT</option>
+													<option value={"HarperCollins"}>HarperCollins</option>
+													<option value={"Macmillan"}>Macmillan</option>
+													<option value={"Pearson"}>Pearson</option>
+													<option value={"Scholastic"}>Scholastic</option>
+													<option value={"Wiley"}>Wiley</option>
+													<option value={"Kodansha"}>Kodansha</option>
+												</select>
+											</div>
+											
 										</div>
 									</div>
 								
@@ -118,7 +132,16 @@ return(
 											<label style={{fontSize:'20px', color:'#1E90FF'}}>Type</label>
 										</div>
 										<div className='row ml1'>
-											<label >{book.type || '-'} </label>
+											<select  onChange={this.updateInfo} name="type"  value={this.state.type} onClick= {this.onClick} className="form-control"   placeholder="type"  >
+												
+                                        <option value={"Mathematics"}> Programming</option>
+										<option value={"Programming"}>Mathematics</option>
+                                        <option value={"Supporting Fields"}>Supporting Fields</option>
+										<option value={"Operating System"}>Operating System</option>
+										<option value={"Computer Science"}>Computer Science</option>
+										<option value={"Operating System"}>Operating System</option>
+										<option value={"Miscellaneous"}>Miscellaneous</option>
+												</select>
 										</div>
 									</div>
 
@@ -127,7 +150,9 @@ return(
 											<label style={{fontSize:'20px', color:'#1E90FF'}}>Price</label>
 										</div>
 										<div className='row ml1'>
-											<label >{book.price || '-'} </label>
+										<input   placeholder={book.price +"$"|| '-'} type="text" className="form-control" name='publishingYear' value={book.price +"$"|| '-'} onChange={this.onChange}/>
+										
+											
 										</div>
 									</div>
 
@@ -136,7 +161,9 @@ return(
 											<label style={{fontSize:'20px', color:'#1E90FF'}}>Edition</label>
 										</div>
 										<div className='row ml1'>
-											<label >{book.edition || '-'} </label>
+											
+											<input   placeholder={book.edition || '-'} type="text" className="form-control" name='publishingYear' value={book.edition || '-'} onChange={this.onChange}/>
+
 										</div>
 									</div>
 
@@ -145,7 +172,8 @@ return(
 											<label style={{fontSize:'20px', color:'#1E90FF'}}>Quantily</label>
 										</div>
 										<div className='row ml1'>
-											<label >{book.totalcopies || '-'} </label>
+											
+											<input   placeholder={book.totalcopies || '0'} type="text" className="form-control" name='publishingYear' value={book.totalcopies || '0'} onChange={this.onChange}/>
 										</div>
 									</div>
 
@@ -154,7 +182,8 @@ return(
 											<label style={{fontSize:'20px', color:'#1E90FF'}}>Additionals</label>
 										</div>
 										<div className='row ml1'>
-											<label >{book.additionals || '-'} </label>
+										
+											<input   placeholder={book.additionals || '-'} type="text" className="form-control" name='publishingYear' value={book.additionals || '-'} onChange={this.onChange}/>
 										</div>
 									</div>
 									

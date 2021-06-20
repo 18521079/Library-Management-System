@@ -126,7 +126,7 @@ let wid='15vw';
 										</div>
 										<div style={{background:'white'}} className="dialogBody" onClick={Filters.preventHide} >
 											<div style={{width:wid}}>
-												<label>Name</label>
+												<label>Name  <i style={{color:"#3AE7E1"}} class="fas fa-check-square"></i></label>
 												<div className="form-outline">
 													<input placeholder="name" className="form-control" onChange={this.updateInfo} name="name" value={this.state.name}/>
 												</div>
@@ -141,13 +141,13 @@ let wid='15vw';
 											</div>
 
 											<div style={{width:wid}}>
-												<label>ID</label>
+												<label>ID  <i style={{color:"#3AE7E1"}} class="fas fa-check-square"></i></label>
 												<div className="form-outline">
 													<input placeholder="id" className="form-control" onChange={this.updateInfo} name="roll" value={this.state.roll}/>
 												</div>
 											</div>
 											<div style={{width:wid}}>
-												<label>Phone</label>
+												<label>Phone  <i style={{color:"#3AE7E1"}} class="fas fa-check-square"></i></label>
 												<div className="form-outline">
 													<input placeholder="phone" className="form-control" onChange={this.updateInfo} name="phone" value={this.state.phone}/>
 												</div>

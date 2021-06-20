@@ -55,6 +55,11 @@ const BooksManageMentIndex = Loadable({
     loading: () => <div> </div>,
 });
 
+const parameters = Loadable({
+    loader: () => import('./components/parameters/parameters'),
+    loading: () => <div> </div>,
+});
+
 const NotFound = Loadable({
     loader: () => import('./components/notfound/Index'),
     loading: () => <div> </div>,
@@ -114,6 +119,7 @@ componentDidMount(){
                     <Route path="/book/*" component={BooksInfoIndex} />
                     <Route path="/bookUpdate/*" component={BooksUpdateIndex} />
                     <Route path="/books_management" component={BooksManageMentIndex} />
+                    <Route path="/parameters" component={parameters} />
                     <Route path="/student/*" component={StudentsInfoIndex} />
                      <Route exact path="*" component={NotFound} />
                     </Switch>

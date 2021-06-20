@@ -263,7 +263,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookissue', {
 														  
 															<label style={{color:"#3e8177"}} ><i class="far fa-calendar-alt"></i> Recommended To Return By :</label>
 															<div className="form-outline">
-															<input className="form-control" name="recommend" placeholder="None" value={new Date((new Date()).getTime() + 90*24*60*60*1000).toDateString()}/>
+															<input className="form-control" name="recommend" placeholder="None" value={new Date((new Date()).getTime() + 15*24*60*60*1000).toDateString()}/>
 															</div>
 														</div>
 

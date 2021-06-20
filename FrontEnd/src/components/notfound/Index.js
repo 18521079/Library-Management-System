@@ -25,15 +25,15 @@ export default class notFound extends React.Component
 
 		return(
 
-			<div className="pageView" >
+			<div style={{marginLeft:"10px"}} className="pageView" >
 			<div className="pageRow" style={{alignContent:'center',textAlign:'center'}} >
 			<div style={{border:'2px solid #dfdfdf',borderRadius:'12px',display:'flex'}}>
 			<img src={not}/>
 			<div style={{margin:'15px'}}>
-			<div style={{fontSize:'40px',fontWeight:'1000',color:'#707070'}}>Hey..Don't worry!!You Just Managed to Mistype The Address..</div>
+			<div style={{fontSize:'40px',fontWeight:'1000',color:'#707070'}}>Hey...Don't worry!!</div>
 			<div style={{fontSize:'39px',fontWeight:'800',color:'#e59400',marginTop:'10px'}}>Did you mean any of these..?</div>
 							<div style={{marginTop:'5vh',marginLeft:'10vw',cursor:'pointer'}}>
-							<div style={{display:'flex'}}>
+							<div style={{display:'flex', marginLeft:"-60px"}}>
 							<Link to={"/home"} className="reflinks"><div style={{fontSize:'40px',color:'#0099cc'}} className="reflinks"><img src={linkIcon}style={{height:'24px'}}/>Home</div></Link>
 							<Link to={"/books"} className="reflinks"><div style={{fontSize:'40px',color:'#0099cc',marginLeft:'2vw'}} className="reflinks"><img src={linkIcon}style={{height:'24px'}}/>Books</div></Link>
 							</div>

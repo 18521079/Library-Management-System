@@ -22,7 +22,7 @@ export default class BooksInfo extends React.Component {
 render(){
 
 let {book}=this.props;
-var elmDispayform= this.state.isDisplayForm ? <img style={{marginLeft:"35px", marginTop:"-20px", marginBottom:"20px", width:"400px"}} src={"/assets/img/"+`${book.id}`+".jpg"} />: '';
+var elmDispayform= this.state.isDisplayForm ? <img style={{marginLeft:"35px", marginTop:"-20px", marginBottom:"20px", width:"400px"}} src={"/assets/book/"+`${book.id}`+".jpg"} />: '';
 
 
 return(

@@ -113,12 +113,13 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookissue', {
 				const none=<div style={{"marginLeft":'20px'}}>-</div>
 				return(
 					<tr key={item.id} className="tableRow"style={{fontSize:'0.9em'}}>
-						<td className="" title="Click to know more about this book" style={{width:'20vw'}}>
-						<Link to={"/book/"+item.id} draggable="false"  className="">{item.name}</Link>
-
-						</td>
+						<td className=""><img style={{width:"65px"}} src={"/assets/book/"+`${item.id}`+".jpg"}></img></td>
+						<td className="" title="Click to know more about this book" style={{width:'200px'}}>
+						
+						<Link to={"/book/"+item.id} draggable="false"  className="">{item.name=="HHHH"? ("Game"): item.name }</Link></td>
+					
 						<td className="">{item.isbn ? (item.isbn|| '-') : 'IDBOOK397'}</td>
-						<td className="">{item.author ? (item.author || '-') : 'UIT'}</td>
+						<td style={{width:'140px'}} className="">{item.author ? (item.author || '-') : 'UIT'}</td>
 						
 						
 						
@@ -166,14 +167,17 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookissue', {
 			<div className="pageRow" id="booksBlock">
 				<div className="thisBlock">
 					<div className="blockBody">
-						<div className="thisTable mt10 table-height-book">
+						<div className="thisTable mt10 table-height-book1">
 							<div className="tbl-header">
 								<table  >
 									<thead >
 									<tr style={{fontSize:'19px'}}>
+									
+									<th style ={{color:'white'}} className="">Image</th>
+										<th style ={{color:'white', width:'200px', height:'50px'}} className="">Name</th>
 										
-										<th style ={{color:'white', width:'280px', height:'50px'}} className="">Name</th>
 										<th style ={{color:'white'}} className="">ID</th>
+										
 										<th style ={{color:'white'}} className="">Author</th>
 									
 										<th style ={{color:'white'}} className="">Publisher</th>

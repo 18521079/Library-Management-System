@@ -76,15 +76,8 @@ return(
 		<div className='row mt-7'>
         <div className='col'></div>
       <div className="col ">
-      <ul class=" ml5 pagination">
-        <li className="page-item"><a class="page-link" href="#">Previous</a></li>
-        <li className="page-item"><a class="page-link" href="#">1</a></li>
-        <li className="page-item"><a class="page-link" href="#">2</a></li>
-        <li className="page-item"><a class="page-link" href="#">3</a></li>
-        <li className="page-item"><a class="page-link" href="#">4</a></li>
-        <li className="page-item"><a class="page-link" href="#">5</a></li>
-        <li className="page-item"><a class="page-link" href="#">Next</a></li>
-     </ul>
+     
+     
     </div>
     </div>
 

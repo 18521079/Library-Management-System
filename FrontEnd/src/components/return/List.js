@@ -110,6 +110,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 				if(!item.return)
 				return(
 					<tr key={item.id} className="tableRow"style={{fontSize:'0.9em'}}>
+						
 						<td className="" >{item.bookname}</td>
 					
 						<td className="">{item.author=="1" ? "UIT" : item.author}</td>
@@ -128,7 +129,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 							</div>
 						</td>
 						<td>
-						<a onClick={()=>{this.setState({bookid:item.bookid,studentid:item.studentid,studentname:item.studentname,roll:item.roll,bookname:item.bookname,author:item.author,publisher:item.publisher,edition:item.edition,isbn:item.isbn,fine:(Math.floor((Date.parse(new Date())-Date.parse(item.issue))/(60*60*24*1000))-4)*0.1},List.showModal())}}><button className="btn  btn_normal mr5 mb3 mt3" >
+						<a onClick={()=>{this.setState({bookid:item.bookid,studentid:item.studentid,studentname:item.studentname,roll:item.roll,bookname:item.bookname,author:item.author,publisher:item.publisher,edition:item.edition,isbn:item.isbn,fine:"0."+(Math.floor((Date.parse(new Date())-Date.parse(item.issue))/(60*60*24*1000))-7)},List.showModal())}}><button className="btn  btn_normal mr5 mb3 mt3" >
 						<i class="fas fa-undo-alt"></i> Return
                                 </button></a>
 						</td>
@@ -171,6 +172,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 								<table >
 								<thead className="thead-dark">
 									<tr>
+									
 										<th style ={{color:'white', height:"60px"}}className="mt1">  Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
 										
 										<th style ={{color:'white'}} className="">Author</th>

@@ -129,13 +129,14 @@ let wid='20vw';
                           <div className="d-flex position-relative float-left">
                             <h1 className="section-title_4">Book List</h1>
                           </div>
+						 
                         </div>
                       </div>
-
+					 
                     {/*this is button add books*/}
 					  <div className="row">
-						  <div className='col-6'>
-
+						  <div style={{marginTop:"30px"}} className='col-6'>
+						  
 					  <div className="text-center ml-288"></div>
 								</div>
 

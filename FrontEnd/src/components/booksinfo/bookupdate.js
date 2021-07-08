@@ -5,7 +5,8 @@ import BookHistory from './bookHistory';
 import './style.css'
 import { css } from '@emotion/core';
 import { ScaleLoader } from 'react-spinners';
-
+import {ToastContainer, toast, Zoom, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const override = css`
     display:inline;
@@ -83,6 +84,25 @@ this.fetchAllStudents();
 
 
 render(){
+	const successToast=()=>{
+		toast("Update book succcess", {
+			/*className: "custom-toast",
+			draggable: true,
+			position: toast.POSITION.BOTTOM_RIGHT,
+			*/
+			className: "info-toast",
+			position: toast.POSITION.BOTTOM_RIGHT,
+                closeOnClick: true,
+                pauseOnHover: true,
+                autoClose:3000,
+                draggable: true,
+                
+                hideProgressBar: false,
+
+
+		});
+
+		};
 
 	const {book,bookHistory,students}=this.state;
 	return(
@@ -98,7 +118,7 @@ render(){
 						                <img style={{width:"350px"}} src={this.state.profileImg} alt="" id="img" className="img ml5 imgAddBook mt-40 " />
 					                </div>
 
-                                    <button style={{marginLeft:"170px", marginTop:"30px"}}  className="btn btndefaul" onClick={this.add} disabled={!this.state.bookname || !this.state.author  || !this.state.type }> <i class="far fa-edit"></i> Update </button>
+                                    <button style={{marginLeft:"170px", marginTop:"30px"}}  className="btn btndefaul" onClick={successToast} > <i class="far fa-edit"></i> Update </button>
 											<button style={{marginLeft:"20px", marginTop:"30px"}} className="btn btn_normal" > <i class="far fa-window-close"></i> Cancel</button>
                             </div>
 

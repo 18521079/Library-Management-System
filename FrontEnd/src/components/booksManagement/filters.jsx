@@ -204,7 +204,7 @@ let wid='20vw';
 													<option value={"Raoul-Gabriel"}>Raoul-Gabriel</option>
 													<option value={"Macmillan"}>Macmillan</option>
 													<option value={"SEDRA SMITH"}>SEDRA SMITH</option>
-													<option value={"Christian Posta"}>UIT</option>
+													<option value={"UIT"}>UIT</option>
 													<option value={"Wiley"}>Wiley</option>
 													<option value={"Kodansha"}>Kodansha</option>
 												</select>

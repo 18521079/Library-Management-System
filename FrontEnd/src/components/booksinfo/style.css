@@ -2,7 +2,11 @@
 {
     margin-left: 10px !important;
 }
-
+.info-toast
+{
+    background-color: #3498db !important;
+    color: white !important;
+}
 .heigh-th
 {
     height: 50px !important;
@@ -67,6 +71,28 @@
 	top: 14px;
   }
 
+
+  .section-title-5 {
+	font-size: 28px;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.14;
+	letter-spacing: normal;
+	color: #3e8177;
+	margin-bottom: 22px;
+    width: 180px !important;
+  }
+  
+  .section-title-5:after {
+	content: "";
+	width: 50px;
+	height: 2px;
+	background: #3e8177;
+	position: absolute;
+	right: -60px;
+	top: 14px;
+  }
 
   .section-title-2 {
 	font-size: 28px;

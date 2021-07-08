@@ -2,7 +2,11 @@
 {
     margin-left: 10px;
 }
-
+.info-toast
+{
+    background-color: #3498db !important;
+    color: white !important;
+}
 .ml618
 {
     margin-left: 622px !important;

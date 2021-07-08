@@ -1,10 +1,11 @@
 import React from 'react';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
-
-import { toast } from 'react-toastify';	
+import {ToastContainer, toast, Zoom, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { css } from '@emotion/core';
 import { ScaleLoader } from 'react-spinners';
+import BackspaceIcon from '@material-ui/icons/Backspace';
 
 const override = css`
     display:inline;
@@ -14,6 +15,7 @@ const override = css`
 `;
 
 export default class List extends React.Component {
+
 
 	constructor(){
 		super();
@@ -32,8 +34,6 @@ export default class List extends React.Component {
 		};
 		
 	}
-
-
 
 
 
@@ -102,6 +102,16 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookissue', {
     /* eslint-disable no-unused-vars */
 
 	render(){
+		const successToast=()=>{
+		toast("Books are being borrowed, can't deleted", {
+			className: "info-toast",
+			draggable: true,
+			position: toast.POSITION.BOTTOM_RIGHT,
+
+
+		});
+
+		};
 		let wid='20vw'
 		let itemList;
 		if(this.props.books && this.props.books.length > 0){
@@ -131,12 +141,13 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookissue', {
 
 						{item.availablecopies? 
 
-<Link style={{textDecoration:"none"}} to={"/bookUpdate/"+item.id} draggable="false"  className="">&nbsp; &nbsp;&nbsp; &nbsp;<i style={{color:"#87CEFA", fontSize:'1.4em'}} class="fas fa-edit"></i></Link>
+<Link style={{textDecoration:"none", marginLeft:"-22px"}} to={"/bookUpdate/"+item.id} draggable="false"  className="">&nbsp; &nbsp;&nbsp; &nbsp;<i style={{color:"#87CEFA", fontSize:'1.4em'}} class="fas fa-edit"></i></Link>
 					     :
 					     <Link style={{textDecoration:"none"}} to={"/bookUpdate/"+item.id} draggable="false"  className="">&nbsp; &nbsp;&nbsp; &nbsp;<i style={{color:"#87CEFA", fontSize:'1.4em'}} class="fas fa-edit"></i></Link>
 					     }
 
-						<i style={{color:"#87CEFA", fontSize:'1.4em'}} className="far fa-trash-alt ml1"></i>
+						<i onClick={successToast} style={{color:"#87CEFA", fontSize:'1.3em'}} className="fas fa-backspace ml1"></i>
+						
 					</td>
 					</tr>
 				)
@@ -183,7 +194,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookissue', {
 										<th style ={{color:'white'}} className="">Publisher</th>
 										<th style ={{color:'white'}} className="">Available</th>
 										
-										<th style ={{color:'white'}} className=" ">Action</th>
+										<th style ={{color:'white'}} className=" "> Action</th>
 									</tr>
 									</thead>
 								</table>

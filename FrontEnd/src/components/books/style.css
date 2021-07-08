@@ -34,6 +34,10 @@
 	
 }
 
+.red{
+	background-color: tomato !important;
+	margin-left: -10px;
+}
 .section-title_4 {
 	font-size: 28px;
 	font-weight: 600;

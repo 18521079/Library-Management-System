@@ -105,7 +105,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/countstudent', {
           <div className="col mr-2">
             <div className="text-xs font-weight-bold text-primary text-uppercase mb-1 getBook">
             Books</div>
-            <div className="h5 mb-0 font-weight-bold text-gray-800">{this.state.total || 0}</div>
+            <div className="h5 mb-0 font-weight-bold text-gray-800">{this.state.total-20 || 0}</div>
           </div>
           <div className="col-auto">
             <i style={{color:'#bad7df'}} className="fas fa-book-open fa-2x text-gray-300" />
@@ -141,7 +141,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/countstudent', {
             </div>
             <div className="row no-gutters align-items-center">
               <div className="col-auto">
-                <div className="h5 mb-0 mr-3 font-weight-bold text-gray-800">{this.state.avl || 0}</div>
+                <div className="h5 mb-0 mr-3 font-weight-bold text-gray-800">{this.state.avl-24 || 0}</div>
               </div>
               <div className="col">
                 <div className="progress progress-sm mr-2">
@@ -165,7 +165,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/countstudent', {
           <div className="col mr-2">
             <div className="text-xs font-weight-bold text-warning text-uppercase mb-1 setpink">
             Students</div>
-            <div className="h5 mb-0 font-weight-bold text-gray-800">18</div>
+            <div className="h5 mb-0 font-weight-bold text-gray-800">14</div>
           </div>
           <div className="col-auto">
             <i style={{color:'#B0FEFE'}} className="fas fa-user-graduate fa-2x text-gray-300" />
@@ -203,7 +203,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/countstudent', {
           NODEJS By EMANUELE DELBOLO
         </h6>
         <p style={{fontSize:'17px', color:"#696969"}}className="fs-15">Publisher: 
-          DHANPAT RAI</p>
+          UIT</p>
           <p style={{color:"#008080"}}> Available Books:
           25</p>
           <spam style={{color:"#008080"}}>The number of Books
@@ -251,7 +251,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/countstudent', {
           MONGGODB
         </h6>
         <p style={{fontSize:'17px', color:"#696969"}}className="fs-15">Publisher: 
-          DHANPAT RAI</p>
+          UIT</p>
           <p style={{color:"#008080"}}> Available Books:
           25</p>
           <spam style={{color:"#008080"}}>The number of Books
@@ -300,7 +300,7 @@ fetch('https://stark-hamlet-65683.herokuapp.com/countstudent', {
           REACT HOOKS
         </h6>
         <p style={{fontSize:'17px', color:"#696969"}}className="fs-15">Publisher: 
-          DHANPAT RAI</p>
+          UIT</p>
           <p style={{color:"#008080"}}> Available Books:
           5</p>
           <spam style={{color:"#008080"}}>The number of Books

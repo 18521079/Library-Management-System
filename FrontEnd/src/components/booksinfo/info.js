@@ -158,7 +158,7 @@ return(
 											<label style={{fontSize:'20px', color:'#1E90FF'}}>Price</label>
 										</div>
 										<div className='row ml1'>
-											<label >{book.price || '-'} $</label>
+											<label >{book.price || '-'}0000 VND</label>
 										</div>
 									</div>
 

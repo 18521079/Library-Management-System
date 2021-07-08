@@ -122,14 +122,14 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookreturn', {
 						<td className="">{item.roll ? (item.roll || '-') : '-'}</td>
 						
 						<td className="">
-						<div className="row rowstyle">
-								<Link style={{textDecoration:"none"}} to={"/book/"+item.bookid} draggable="false"  className="">&nbsp; &nbsp;&nbsp; &nbsp;<i style={{color:"#87CEFA", fontSize:'1.4em'}} class="fas fa-book"></i></Link>
+						<div  className="row rowstyle">
+								<Link style={{textDecoration:"none", marginLeft:"-18px"}} to={"/book/"+item.bookid} draggable="false"  className="">&nbsp; &nbsp;&nbsp; &nbsp;<i style={{color:"#87CEFA", fontSize:'1.4em'}} class="fas fa-book"></i></Link>
 								<br/>
 								<Link style={{textDecoration:"none"}} to={"/student/"+item.studentid} draggable="false"  className="">&nbsp; &nbsp; &nbsp;<i style={{color:"#87CEFA", fontSize:'1.4em'}} class="fas fa-user-graduate"></i></Link>
 							</div>
 						</td>
 						<td>
-						<a onClick={()=>{this.setState({bookid:item.bookid,studentid:item.studentid,studentname:item.studentname,roll:item.roll,bookname:item.bookname,author:item.author,publisher:item.publisher,edition:item.edition,isbn:item.isbn,fine:"0."+(Math.floor((Date.parse(new Date())-Date.parse(item.issue))/(60*60*24*1000))-7)},List.showModal())}}><button className="btn  btn_normal mr5 mb3 mt3" >
+						<a style={{marginLeft:"-15px"}} onClick={()=>{this.setState({bookid:item.bookid,studentid:item.studentid,studentname:item.studentname,roll:item.roll,bookname:item.bookname,author:item.author,publisher:item.publisher,edition:item.edition,isbn:item.isbn,fine:+(Math.floor((Date.parse(new Date())-Date.parse(item.issue))/(60*60*24*1000))-14)*1000},List.showModal())}}><button className="btn  btn_normal mr5 mb3 mt3" >
 						<i class="fas fa-undo-alt"></i> Return
                                 </button></a>
 						</td>

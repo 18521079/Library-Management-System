@@ -124,18 +124,18 @@ fetch('https://stark-hamlet-65683.herokuapp.com/bookissue', {
 						
 						
 						<td className="">{item.publisher ? (item.publisher || '-') : 'UIT'}</td>
-						<td className="copies">{item.availablecopies ? (item.availablecopies || '-') : '0'}</td>
+						<td style={{marginLeft:"5px"}} className="copies">{item.availablecopies ? (item.availablecopies || '-') : '0'}</td>
 						
 						<td className="">
 						
 
 						{item.availablecopies? 
 
-						<a style={{marginLeft:'4px'}} onClick={()=>{this.setState({bookid:item.id,bookname:item.name,author:item.author,publisher:item.publisher,edition:item.edition,isbn:item.isbn},List.showModal())}}><button className="btn  btn_normal mr5 mb3 mt3" >
+						<a  style={{marginLeft:'-12px'}} onClick={()=>{this.setState({bookid:item.id,bookname:item.name,author:item.author,publisher:item.publisher,edition:item.edition,isbn:item.isbn},List.showModal())}}><button className="btn  btn_normal mr5 mb3 mt3" >
 						<i class="far fa-id-card"></i> &nbsp; &nbsp; Borrow
                                 </button></a>
 					     :
-					     <a style={{cursor:'not-allowed',opacity:'0.6',marginLeft:'4px'}}>Borrow</a>
+					     <a style={{ marginLeft:'-12px'}} className="btn  mr5 mb3 mt3 btndefaul red" style={{cursor:'not-allowed',opacity:'0.6',marginLeft:'4px'}}> <i class="far fa-times-circle"></i> &nbsp; &nbsp; Borrow</a>
 					     }
 
 						</td>

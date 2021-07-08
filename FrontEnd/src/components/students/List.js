@@ -56,9 +56,9 @@ export default class ListIndex extends React.Component {
 						<td className="copies">{item.issued ? (item.issued || '-') : '0'}</td>
 						
 						<td className="">
-						<Link to={"/student/"+item.id} draggable="false"  className="ml1"><i style={{color:"#87CEFA", fontSize:'1.4em'}} class="fas fa-user-graduate"></i></Link>
+						<Link style={{marginLeft:"-16px"}} to={"/student/"+item.id} draggable="false"  className="ml1"><i style={{color:"#87CEFA", fontSize:'1.4em'}} class="fas fa-user-graduate"></i></Link>
 						<Link to={"/student/"+item.id} draggable="false"  className="ml1"><i  style={{color:"#87CEFA", fontSize:'1.4em'}} class="far fa-edit"></i></Link>
-						<Link to={"/student/"+item.id} draggable="false"  className="ml1"><i style={{color:"#87CEFA", fontSize:'1.4em'}} class="far fa-trash-alt"></i></Link>
+						<Link to={"/student/"+item.id} draggable="false"  className="ml1"><i style={{color:"#87CEFA", fontSize:'1.4em'}} class="fas fa-backspace"></i></Link>
 
 						</td>
 					</tr>

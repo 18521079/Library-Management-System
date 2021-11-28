@@ -47,7 +47,7 @@ export default class LoginIndex extends React.Component{
     }
 
     render(){
-        if (this.state.email=='khanhly01@gmail.com'&&this.state.password=='123456') {
+        if (this.state.email=='19521827@gm.uit.edu.vn'&&this.state.password=='123456') {
             this.props.updateRoutes(true)
             return (<Redirect to="/home" />)}
         return(

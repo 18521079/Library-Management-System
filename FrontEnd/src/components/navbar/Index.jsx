@@ -17,16 +17,16 @@ export default class NavBar extends React.Component{
 			        </li>
 			        <li className="navItem logout" style={{marginTop:'10px'}} >
 					<a style={{marginLeft:"-290px"}} className="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<span className="mr-2 d-none d-lg-inline text-gray-600 small">Ly Nguyen Thi Khanh</span>
-						<img style={{width:'35px', height:'35px'}}className="img-profile rounded-circle" src="assets/img/avata.jpg" />
+						<span className="mr-2 d-none d-lg-inline text-gray-600 small">Nguyễn Đức Mạnh</span>
+						<img style={{width:'35px', height:'35px'}}className="img-profile rounded-circle" src="assets/img/avatar.jpg" />
 					</a>
 			        </li>
 
 					<li>
 
 					<li className="navItem logout" style={{marginTop:'10px'}} >
-				        <Link to="/login" draggable="false" style={{fontSize:'20px', marginLeft:"1250px", marginTop:"-60px",  color:"#3e8177"}} onClick={()=>this.props.updateRoutes(false)}>
-					        LogOut <img src={logOut } style={{height:'15px',paddingTop:'14px'}}/>
+				        <Link to="/login" draggable="false" style={{fontSize:'20px', marginLeft:"1160px", marginTop:"-60px",  color:"#3e8177"}} onClick={()=>this.props.updateRoutes(false)}>
+					        LogOut
 				        </Link>
 			        </li>
 					
